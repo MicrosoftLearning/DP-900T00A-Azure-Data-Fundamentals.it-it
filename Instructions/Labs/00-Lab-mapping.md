@@ -1,15 +1,24 @@
-# Mapping dei lab per l'istruttore DP-900
+---
+ms.openlocfilehash: d886b438a93762235ecd051230f873dae1b674ce
+ms.sourcegitcommit: 1117342052bce0bbd5a703bd1f763862b9129807
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "140682439"
+---
+# <a name="dp-900-trainer-lab-mapping"></a>Mapping dei lab per l'istruttore DP-900
 
-Questo corso, DP-900: Concetti fondamentali sui dati di Microsoft Azure, include un set di lab progettati per il training con istruttore. 
+Questo corso, DP-900: Concetti fondamentali sui dati di Microsoft Azure, include un set di lab progettati per la formazione con istruttore. 
 
-> Nota: gli istruttori possono scegliere di richiedere agli studenti di completare uno o più lab nel proprio tempo libero usando gli esercizi nei percorsi di apprendimento associati in Learn (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj). 
+> Nota: gli istruttori possono scegliere di richiedere agli studenti di completare uno o più lab nel proprio tempo libero usando gli esercizi nei percorsi di apprendimento associati in Learn (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj) ). 
 
-## Mapping dei moduli DP-900 ai lab
+## <a name="dp-900-module-mapping-to-labs"></a>Mapping dei moduli DP-900 ai lab
 
-| Lab per l'istruttore DP-900 | Argomento | File markdown |
+| Modulo | Lab | File markdown |
 | --- | --- | --- |
-| 01: DP-900 Modulo 02 | Effettuare il provisioning di servizi di database relazionale di Azure | [01-Provision-Azure-relational-database-services.md](https://github.com/MicrosoftLearning/DP-900IT-Microsoft-Azure-Data-Fundamentals/tree/master/Instructions/01-Provision-Azure-relational-database-services.md) |
-| 02: DP-900 Modulo 02 | Usare SQL per eseguire una query sul database SQL di Azure | [https://github.com/MicrosoftLearning/DP-900IT-Microsoft-Azure-Data-Fundamentals/tree/master/Instructions/02-Use-SQL-to-query-Azure-SQL-Database.md) |
-| 03: DP-900 Modulo 03 | Effettuare il provisioning dei servizi dati non relazionali di Azure  | [03-Provision-non-relational-Azure-data-services.md](https://github.com/MicrosoftLearning/DP-900IT-Microsoft-Azure-Data-Fundamentals/tree/master/Instructions/03-Provision-non-relational-Azure-data-services.md) |
-| 04: DP-900 Modulo 03 | Caricare, scaricare ed eseguire query sui dati in un archivio dati non relazionale | [04-Upload-download-and-query-data-in-a-non-relational-data-store.md](https://github.com/MicrosoftLearning/DP-900IT-Microsoft-Azure-Data-Fundamentals/tree/master/Instructions/04-Upload-download-and-query-data-in-a-non-relational-data-store.md) |
-
+| 02-Esplorare i dati relazionali in Azure | Esplorare il database SQL di Azure | [dp900-01-sql-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-01-sql-lab.md) |
+| 03-Esplorare i dati non relazionali in Azure | Esplorare Archiviazione di Azure | [dp900-02-storage-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-02-storage-lab.md) |
+| 03-Esplorare i dati non relazionali in Azure| Esplora Azure Cosmos DB  | [dp900-03-cosmos-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-03-cosmos-lab.md) |
+| 04-Esplorare l'analisi dei dati in Azure | Presentazione di Azure Synapse Analytics | [dp900-04-synapse-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-04-synapse-lab.md) |
+| 04-Esplorare l'analisi dei dati in Azure | Esplorare Analisi di flusso di Azure | [dp900-05-stream-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-05-stream-lab.md) |
+| 04-Esplorare l'analisi dei dati in Azure | Visualizzare i dati con Power BI | [dp900-pbi-06-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-pbi-06-lab.md) |
