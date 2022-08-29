@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: d886b438a93762235ecd051230f873dae1b674ce
-ms.sourcegitcommit: 1117342052bce0bbd5a703bd1f763862b9129807
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "140682439"
----
 # <a name="dp-900-trainer-lab-mapping"></a>Mapping dei lab per l'istruttore DP-900
 
 Questo corso, DP-900: Concetti fondamentali sui dati di Microsoft Azure, include un set di lab progettati per la formazione con istruttore. 
