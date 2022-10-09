@@ -18,7 +18,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 In questo esercizio si effettuerà il provisioning di una risorsa di Database di Azure per PostgreSQL.
 
-1. In the Azure portal, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Azure Database for PostgreSQL<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure Database for PostgreSQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+1. Nel portale di Azure selezionare **&#65291; Crea una risorsa** nell'angolo in alto a sinistra e cercare *Database di Azure per PostgreSQL*. Nella pagina **Database di Azure per PostgreSQL** selezionare **Crea**.
 
 1. Esaminare le opzioni di Database di Azure per PostgreSQL disponibili e quindi nel riquadro **Server flessibile** selezionare **Crea**.
 
@@ -43,7 +43,7 @@ In questo esercizio si effettuerà il provisioning di una risorsa di Database di
 
 1. Selezionare **Rivedi e crea** e quindi selezionare **Crea** per creare il database PostgreSQL di Azure.
 
-1. Wait for deployment to complete. Then go to the resource that was deployed, which should look like this:
+1. Attendere il completamento della distribuzione. Passare quindi alla risorsa distribuita, che dovrebbe essere simile alla seguente:
 
     ![Screenshot del portale di Azure che mostra la pagina Database di Azure per PostgreSQL.](images/postgresql-portal.png)
 
