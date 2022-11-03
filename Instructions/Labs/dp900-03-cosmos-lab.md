@@ -15,10 +15,10 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 ## <a name="create-a-cosmos-db-account"></a>Creare un account Cosmos DB
 
-Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosmos DB in una sottoscrizione di Azure. In questo esercizio si eseguirà il provisioning di un account Cosmos DB che usa l'API Core (SQL).
+Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosmos DB in una sottoscrizione di Azure. In questo esercizio si effettuerà il provisioning di un account Cosmos DB che usa Azure Cosmos DB for NoSQL.
 
 1. Nel portale di Azure selezionare **Crea una risorsa** in alto a sinistra e cercare *Azure Cosmos DB*.  Nei risultati selezionare **Azure Cosmos DB** e quindi **Crea**.
-1. Nel riquadro **Core (SQL) - Consigliato** selezionare **Crea**.
+1. Nel riquadro **Azure Cosmos DB for NoSQL** selezionare **Crea**.
 1. Immettere i dettagli seguenti e quindi selezionare **Rivedi e crea**: 
     - **Sottoscrizione**: se si sta usando una sandbox, selezionare *Concierge Subscription* (Sottoscrizione Concierge). In caso contrario, selezionare la sottoscrizione di Azure personale.
     - **Gruppo di risorse**: se si sta usando una sandbox, selezionare il gruppo di risorse esistente (che avrà un nome simile a *learn-xxxx...* ). In caso contrario, creare un nuovo gruppo di risorse con il nome desiderato.
@@ -71,6 +71,6 @@ Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosm
 1. Usare il pulsante **Esegui query** per eseguire la query aggiornata ed esaminare i risultati, che includono le entità JSON per tutti gli elementi con un campo **address** contenente il testo "Any St."
 1. Chiudere l'editor di query SQL ignorando le modifiche.
 
-    È stata illustrata la procedura per creare ed eseguire query su entità JSON in un database Cosmos DB usando l'interfaccia Esplora dati nel portale di Azure. In uno scenario reale, uno sviluppatore di applicazioni userebbe uno dei molti SDK (Software Development Kit) specifici dei linguaggi di programmazione per chiamare l'API Core (SQL) ed eseguire operazioni sui dati nel database.
+    È stata illustrata la procedura per creare ed eseguire query su entità JSON in un database Cosmos DB usando l'interfaccia Esplora dati nel portale di Azure. In uno scenario reale, uno sviluppatore di applicazioni userebbe uno dei molti SDK (Software Development Kit) specifici dei linguaggi di programmazione per chiamare l'API NoSQL ed eseguire operazioni sui dati nel database.
 
 > **Suggerimento**: se è stata completata l'esplorazione di Azure Cosmos DB, è possibile eliminare il gruppo di risorse creato in questo esercizio.

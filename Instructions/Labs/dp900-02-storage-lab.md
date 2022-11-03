@@ -68,7 +68,7 @@ Il supporto di Azure Data Lake Store Gen2 consente di usare cartelle gerarchiche
 
 1. Scaricare il file JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) da `https://aka.ms/product2.json` e salvarlo sullo stesso computer, nella stessa cartella in cui in precedenza è stato scaricato **product1.json**. Lo si caricherà nell'archivio BLOB in un secondo momento.
 1. Nella pagina del portale di Azure dell'account di archiviazione, sulla sinistra scorrere verso il basso fino alla sezione **Impostazioni** e selezionare **Aggiornamento di Data Lake Gen2**.
-1. Nella pagina ****Aggiornamento di Data Lake Gen2**** espandere e completare ogni passaggio per aggiornare l'account di archiviazione per abilitare lo spazio dei nomi gerarchico e supportare Azure Data Lake Storage Gen 2. Questa operazione potrebbe richiedere tempo.
+1. Nella pagina **Aggiornamento di Data Lake Gen2** espandere e completare ogni passaggio per aggiornare l'account di archiviazione per abilitare lo spazio dei nomi gerarchico e supportare Azure Data Lake Storage Gen 2. Questa operazione potrebbe richiedere tempo.
 1. Al termine dell'aggiornamento, nel riquadro a sinistra, nella sezione in alto selezionare **Browser archiviazione** e tornare alla radice del contenitore BLOB **data**, che contiene ancora la cartella **product_data**.
 1. Selezionare la cartella **product_data** e verificare che contenga ancora il file **product1.json** caricato in precedenza.
 1. Usare il pulsante **&#10514; Carica** per aprire il pannello **Carica BLOB**.
