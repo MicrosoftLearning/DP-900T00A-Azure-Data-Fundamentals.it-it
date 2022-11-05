@@ -20,7 +20,7 @@ In questo esercizio si effettuerà il provisioning di una risorsa di Database di
 
 1. Nel portale di Azure selezionare **&#65291; Crea una risorsa** nell'angolo in alto a sinistra e cercare *Database di Azure per PostgreSQL*. Nella pagina **Database di Azure per PostgreSQL** selezionare **Crea**.
 
-1. Esaminare le opzioni di Database di Azure per PostgreSQL disponibili e quindi nel riquadro **Server flessibile** selezionare **Crea**.
+1. Esaminare le opzioni di Database di Azure per PostgreSQL disponibili e quindi nel riquadro **Database di Azure per PostgreSQL** selezionare **Server flessibile (scelta consigliata)** e infine **Crea**.
 
     ![Screenshot delle opzioni di distribuzione di Database di Azure per PostgreSQL](images/postgresql-options.png)
 

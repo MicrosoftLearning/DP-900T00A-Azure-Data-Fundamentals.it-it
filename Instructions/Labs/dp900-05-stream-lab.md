@@ -84,8 +84,8 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 6. Nel riquadro a sinistra del pannello dell'account di archiviazione selezionare la scheda **Contenitori**.
 7. Aprire il contenitore **data**.
 8. Nel contenitore **data** passare alla gerarchia di cartelle in cui è contenuta una cartella relativa all'anno corrente, con sottocartelle per il mese, il giorno e l'ora.
-9. Nella cartella relativa all'ora selezionare il file creato, che dovrebbe avere un nome simile a **0_xxxxxxxxxxxxxxxx.json**.
-10. Nella pagina del file selezionare **Modifica** ed esaminare il contenuto del file, che deve essere costituito da un record JSON ogni 10 secondi, in cui è indicato il numero di messaggi ricevuti da dispositivi IoT, come illustrato di seguito:
+9. Nella cartella relativa all'ora notare il file creato, che dovrebbe avere un nome simile a **0_xxxxxxxxxxxxxxxx.json**.
+10. Nel menu **...** per il file (a destra dei dettagli del file) selezionare **Visualizza/Modifica** ed esaminare il contenuto del file, che deve essere costituito da un record JSON per ogni periodo di 10 secondi, in cui è indicato il numero di messaggi ricevuti da dispositivi IoT, come illustrato di seguito:
 
     ```
     {"starttime":"2021-10-23T01:02:13.2221657Z","endtime":"2021-10-23T01:02:23.2221657Z","device":"iotdevice","messages":2}

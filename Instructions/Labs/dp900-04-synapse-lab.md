@@ -106,7 +106,7 @@ Una delle attività chiave che è possibile eseguire con Azure Synapse Analytics
     - **Abilita registrazione**: <u>de</u>selezionata
     - **Abilita staging**: <u>de</u>selezionata
 11. Nel passaggio **Rivedere e completare** leggere il riepilogo nel passaggio secondario **Rivedere** e quindi fare clic su **Avanti >** .
-12. Nel passaggio **Distribuzione** attendere la distribuzione della pipeline e quindi scegliere **Fine**.
+12. Nel passaggio secondario **Distribuzione** attendere la distribuzione della pipeline e quindi scegliere **Fine**.
 13. In Synapse Studio selezionare la pagina **Monitoraggio** e nella scheda **Esecuzioni della pipeline** attendere che la pipeline **Copia prodotti** sia completata con stato **Riuscito** (è possibile usare il pulsante **&#8635; Aggiorna** nella pagina Esecuzioni della pipeline per aggiornare lo stato).
 14. Nella pagina **Dati** selezionare la scheda **Collegato** ed espandere la gerarchia di **Azure Data Lake Storage Gen 2** fino a visualizzare la risorsa di archiviazione file per l'area di lavoro di Synapse. Selezionare quindi la risorsa di archiviazione file per verificare che un file denominato **products.csv** sia stato copiato in questo percorso, come illustrato di seguito:
 
