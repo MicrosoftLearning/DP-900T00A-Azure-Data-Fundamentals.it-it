@@ -8,7 +8,7 @@ layout: home
 
 Questi esercizi pratici sono progettati a supporto del contenuto di training in [Microsoft Learn](https://docs.microsoft.com/training/).
 
-Per completare questi esercizi, è necessaria una sottoscrizione di Microsoft Azure in cui sono presenti le permissioni amministrative. È possibile iscriversi per una versione di valutazione gratuita all’indirizzo [https://azure.microsoft.com](https://azure.microsoft.com).
+Per completare questi esercizi, sarà necessaria una sottoscrizione di Microsoft Azure con autorizzazioni amministrative. È possibile iscriversi per una versione di valutazione gratuita all’indirizzo [https://azure.microsoft.com](https://azure.microsoft.com).
 
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | Esercizio |
