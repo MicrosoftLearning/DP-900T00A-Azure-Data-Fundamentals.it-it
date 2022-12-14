@@ -58,9 +58,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
     Se queste tre risorse non sono tutte elencate, fare clic sul pulsante **&#8635; Aggiorna** fino a quando non vengono visualizzate.
 
-    > **Nota**: se si sta usando la sandbox Learn, il gruppo di risorse può contenere anche un secondo *account di archiviazione* denominato **cloudshell*xxxxxxxx***, che consente di archiviare i dati di Azure Cloud Shell usati per eseguire lo script di installazione.
-
-3. Selezionare il processo di Analisi di flusso **stream*xxxxxxxxxxxxx*** e visualizzare le informazioni nella relativa pagina **Panoramica**, osservando in particolare i dettagli seguenti:
+ 3. Selezionare il processo di Analisi di flusso **stream*xxxxxxxxxxxxx*** e visualizzare le informazioni nella relativa pagina **Panoramica**, osservando in particolare i dettagli seguenti:
     - Nel processo è presente sia un *input* denominato **iotinput** sia un *output* denominato **bloboutput**. Questi elementi fanno riferimento all'account di Archiviazione e hub IoT creato dallo script di installazione.
     - Nel processo è presente anche una *query*, che legge i dati dall'input **iotinput** e li aggrega contando il numero di messaggi elaborati ogni 10 secondi; i risultati vengono scritti nell'output **bloboutput**.
 
