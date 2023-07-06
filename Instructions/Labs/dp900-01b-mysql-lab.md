@@ -4,17 +4,17 @@ lab:
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-database-for-mysql"></a>Esplorare Database di Azure per MySQL
+# Esplorare Database di Azure per MySQL
 
 In questo esercizio si effettuerà il provisioning di una risorsa di Database di Azure per MySQL nella sottoscrizione personale di Azure.
 
 Il completamento di questo lab richiederà circa **5** minuti.
 
-## <a name="before-you-start"></a>Prima di iniziare
+## Prima di iniziare
 
 Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free) con accesso di livello amministrativo.
 
-## <a name="provision-an-azure-database-for-mysql-resource"></a>Effettuare il provisioning di una risorsa di Database di Azure per MySQL
+## Effettuare il provisioning di una risorsa di Database di Azure per MySQL
 
 In questo esercizio si effettuerà il provisioning di una risorsa di Database di Azure per MySQL.
 
