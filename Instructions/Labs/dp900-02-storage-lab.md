@@ -4,17 +4,17 @@ lab:
   module: Explore Azure Storage for non-relational data
 ---
 
-# <a name="explore-azure-storage"></a>Esplorare Archiviazione di Azure
+# Esplorare Archiviazione di Azure
 
 In questo esercizio si effettuerà il provisioning di un account di archiviazione di Azure nella sottoscrizione di Azure e si esploreranno i diversi modi in cui è possibile usarlo per archiviare i dati.
 
 Il completamento di questo lab richiederà circa **15** minuti.
 
-## <a name="before-you-start"></a>Prima di iniziare
+## Prima di iniziare
 
 Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free) con accesso di livello amministrativo.
 
-## <a name="provision-an-azure-storage-account"></a>Effettuare il provisioning di un account di archiviazione di Azure
+## Effettuare il provisioning di un account di archiviazione di Azure
 
 Il primo passaggio per usare Archiviazione di Azure prevede il provisioning di un account di archiviazione di Azure nella sottoscrizione di Azure.
 
@@ -30,10 +30,10 @@ Il primo passaggio per usare Archiviazione di Azure prevede il provisioning di u
 
 1. Selezionare **Avanti: Avanzate >** e visualizzare le opzioni di configurazione avanzate. In particolare, si noti che qui è possibile abilitare lo spazio dei nomi gerarchico per supportare Azure Data Lake Storage Gen2. Lasciare **<u>deselezionata</u>** questa opzione (la si abiliterà in seguito) e quindi selezionare **Avanti: Rete >** per visualizzare le opzioni di rete per l'account di archiviazione.
 1. Selezionare **Avanti: Protezione dei dati >** e quindi nella sezione **Recupero** <u>de</u>selezionare tutte le opzioni di **Abilita eliminazione temporanea**. Queste opzioni conservano i file eliminati per il recupero successivo, ma possono causare problemi in un secondo momento quando si abilita lo spazio dei nomi gerarchico.
-1. Continuare a fare clic su **Avanti >** nelle pagine rimanenti senza modificare nessuna delle impostazioni predefinite e quindi nella pagina **Rivedi e crea** attendere la convalida delle selezioni e selezionare **Crea** per creare l'account di archiviazione di Azure.
+1. Continuare con le pagine successive **di >** senza modificare alcuna delle impostazioni predefinite e quindi nella pagina  **Rivedi** attendere che le selezioni vengano convalidate e selezionare **Crea** per creare l'account di archiviazione di Azure.
 1. Attendere il completamento della distribuzione. Passare quindi alla risorsa distribuita.
 
-## <a name="explore-blob-storage"></a>Esplorare l'archivio BLOB
+## Esplorare l'archivio BLOB
 
 Dopo aver creato un account di archiviazione di Azure, è possibile creare un contenitore per i dati BLOB.
 
@@ -62,7 +62,7 @@ Dopo aver creato un account di archiviazione di Azure, è possibile creare un co
 1. Selezionare l'icona **&#x2027;&#x2027;&#x2027;** a destra della cartella e notare che non viene visualizzata alcuna opzione. Le cartelle in un contenitore BLOB dello spazio dei nomi flat sono virtuali e non possono essere gestite.
 1. Usare l'icona **X** in alto a destra nella pagina **data** per chiudere la pagina e tornare alla pagina **Contenitori**.
 
-## <a name="explore-azure-data-lake-storage-gen2"></a>Esplorare Azure Data Lake Storage Gen2
+## Esplorare Azure Data Lake Storage Gen2
 
 Il supporto di Azure Data Lake Store Gen2 consente di usare cartelle gerarchiche per organizzare e gestire l'accesso ai BLOB. Consente anche di usare l'archivio BLOB di Azure per ospitare file system distribuiti per piattaforme di analisi dei Big Data comuni.
 
@@ -79,7 +79,7 @@ Il supporto di Azure Data Lake Store Gen2 consente di usare cartelle gerarchiche
 1. Selezionare l'icona **&#x2027;&#x2027;&#x2027;** a destra della cartella e notare che, con lo spazio dei nomi gerarchico abilitato, è possibile eseguire attività di configurazione a livello di cartella, incluse la ridenominazione delle cartelle e l'impostazione delle autorizzazioni.
 1. Usare l'icona **X** in alto a destra nella pagina **data** per chiudere la pagina e tornare alla pagina **Contenitori**.
 
-## <a name="explore-azure-files"></a>Esplorare File di Azure
+## Esplorare File di Azure
 
 File di Azure consente di creare condivisioni file basate sul cloud.
 
@@ -89,7 +89,7 @@ File di Azure consente di creare condivisioni file basate sul cloud.
 1. Nella parte superiore della pagina selezionare **Connetti**, quindi nel riquadro **Connetti** si noti che esistono schede per i sistemi operativi comuni (Windows, Linux e macOS) contenenti script che è possibile eseguire per connettersi alla cartella condivisa da un computer client.
 1. Chiudere il riquadro **Connetti** e quindi chiudere la pagina **files** per tornare alla pagina **Condivisioni file** dell'account di archiviazione di Azure.
 
-## <a name="explore-azure-tables"></a>Esplorare Tabelle di Azure
+## Esplorare Tabelle di Azure
 
 Tabelle di Azure fornisce un archivio di coppie chiave/valore per le applicazioni che, pur dovendo archiviare i valori dei dati, non necessitano della funzionalità completa e della struttura di un database relazionale.
 

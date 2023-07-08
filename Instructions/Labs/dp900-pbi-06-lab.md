@@ -4,24 +4,24 @@ lab:
   module: Explore fundamentals of data visualization
 ---
 
-# <a name="explore-fundamentals-of-data-visualization-with-power-bi"></a>Esplorare i principi fondamentali della visualizzazione dei dati con Power BI
+# Esplorare i principi fondamentali della visualizzazione dei dati con Power BI
 
 In questo esercizio si userà Microsoft Power BI Desktop per creare un modello di dati e un report contenente le visualizzazioni interattive dei dati.
 
 Il completamento di questo lab richiederà circa **20** minuti.
 
-## <a name="before-you-start"></a>Prima di iniziare
+## Prima di iniziare
 
 Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free) con accesso di livello amministrativo.
 
-### <a name="install-power-bi-desktop"></a>Installare Power BI Desktop
+### Installare Power BI Desktop
 
 Se Microsoft Power BI Desktop non è già installato nel computer Windows, è possibile scaricarlo e installarlo gratuitamente.
 
 1. Scaricare il programma di installazione di Power BI Desktop da [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
 1. Quando il file è stato scaricato, aprirlo e usare la procedura guidata di installazione per installare Power BI Desktop nel computer. Questa installazione può richiedere alcuni minuti.
 
-## <a name="import-data"></a>Importa dati
+## Importa dati
 
 1. Aprire Power BI Desktop. L'interfaccia dell'applicazione ha un aspetto simile al seguente:
 
@@ -63,7 +63,7 @@ Se Microsoft Power BI Desktop non è già installato nel computer Windows, è po
     https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/power-bi/orders.csv
     ```
 
-## <a name="explore-a-data-model"></a>Esplorare un modello di dati
+## Esplorare un modello di dati
 
 Le tre tabelle di dati importate sono state caricate in un modello di dati, che verrà ora esaminato e affinato.
 
@@ -86,14 +86,14 @@ Le tre tabelle di dati importate sono state caricate in un modello di dati, che 
 
     ![Screenshot che mostra come rinominare la gerarchia in Power BI.](images/rename-hierarchy.png)
 
-1. Nel bordo sinistro selezionare la scheda **Dati** e quindi nel riquadro **Campi** selezionare la tabella **clienti**.
+1. Nel bordo sinistro selezionare la scheda **Visualizzazione dati** e quindi nel riquadro **Dati** selezionare la tabella **clienti** .
 1. Selezionare l'intestazione di colonna **Città** e quindi impostare la proprietà **Categoria di dati** su **Città**:
 
     ![Screenshot che mostra come impostare una categoria di dati in Power BI.](images/data-category.png)
 
     Questo passaggio garantirà che i valori di questa colonna vengano interpretati come nomi di città, utili se si intende includere visualizzazioni di mappa.
 
-## <a name="create-a-report"></a>Creare un report
+## Creare un report
 
 A questo punto, è possibile creare un report. È innanzitutto necessario controllare alcune impostazioni per assicurarsi che tutte le visualizzazioni siano abilitate.
 
@@ -103,7 +103,7 @@ A questo punto, è possibile creare un report. È innanzitutto necessario contro
 
     Questa impostazione garantisce che sia possibile includere visualizzazioni mappa nei report.
 
-1. Nel bordo sinistro selezionare la scheda **Report** e visualizzare l'interfaccia di progettazione del report.
+1. Nel bordo sinistro selezionare la scheda **Visualizzazione report** e visualizzare l'interfaccia di progettazione del report.
 
     ![Screenshot che mostra la scheda Report in Power BI.](images/report-tab.png)
 
@@ -111,11 +111,11 @@ A questo punto, è possibile creare un report. È innanzitutto necessario contro
 
     ![Screenshot che mostra come aggiungere una casella di testo in Power BI.](images/text-box.png)
 
-1. Selezionare qualsiasi area vuota nel report per deselezionare la casella di testo. Nel riquadro **Campi** espandere **Prodotti** e selezionare il campo **Prodotti classificati**. Questo passaggio aggiunge una tabella al report.
+1. Selezionare qualsiasi area vuota nel report per deselezionare la casella di testo. Nel riquadro **Dati** espandere **Prodotti** e selezionare il campo **Prodotti classificati** . Questo passaggio aggiunge una tabella al report.
 
     ![Screenshot che mostra come aggiungere una tabella di prodotti classificati a un report in Power BI.](images/categorized-products-table.png)
 
-1. Con la tabella ancora selezionata, nel riquadro **Campi** espandere **Ordini** e selezionare **Ricavi**. Alla tabella viene aggiunta una colonna Revenue. Potrebbe essere necessario espandere le dimensioni della tabella per visualizzarla.
+1. Con la tabella ancora selezionata, nel riquadro **Dati** espandere **Ordini** e selezionare **Ricavi**. Alla tabella viene aggiunta una colonna Revenue. Potrebbe essere necessario espandere le dimensioni della tabella per visualizzarla.
 
     I ricavi vengono formattati come valuta, come specificato nel modello. Non è, tuttavia, stato specificato il numero di posizioni decimali, quindi i valori includono quantità frazionarie. Non è importante per le visualizzazioni che si intende creare, ma se lo si desidera è possibile tornare alla scheda **Modello** o **Dati** e modificare le posizioni decimali.
 
@@ -125,17 +125,17 @@ A questo punto, è possibile creare un report. È innanzitutto necessario contro
 
     ![Screenshot che mostra un grafico a istogramma in pila di prodotti classificati con Revenue in un report.](images/stacked-column-chart.png)
 
-1. Sopra il grafico a colonne selezionato, selezionare l'icona **&#8595;** per attivare il drill-down. Nel grafico selezionare quindi la seconda colonna (*Biciclette da strada*) per eseguire il drill-down e visualizzare i ricavi per i singoli prodotti in questa categoria. Questa funzionalità è possibile perché è stata definita una gerarchia di categorie e prodotti.
+1. Sopra il grafico a colonne selezionato, selezionare l'icona **&#8595;** per attivare il drill-down. Nel grafico selezionare quindi la seconda colonna per eseguire il drill-down e visualizzare i ricavi per i singoli prodotti in questa categoria. Questa funzionalità è possibile perché è stata definita una gerarchia di categorie e prodotti.
 
     ![Screenshot che mostra un istogramma con drill-down per visualizzare i prodotti all'interno di una categoria.](images/drill-down.png)
 
 1. Usare l'icona **&#x2191;** per eseguire il drill-up fino al livello di categoria. Selezionare quindi l'icona **(** &#8595; **)** per disattivare la funzionalità di drill-down.
-1. Selezionare un'area vuota del report e quindi nel riquadro **Campi** selezionare il campo **Quantità** nella tabella **ordini** e il campo **Categoria** nella tabella **prodotti**. Questo passaggio consente di ottenere un altro grafico a colonne che mostra la quantità di vendite in base alla categoria di prodotti.
+1. Selezionare un'area vuota del report e quindi nel riquadro **Dati** selezionare il campo **Quantity** nella tabella **ordini** e il campo **Categoria** nella tabella **prodotti** . Questo passaggio consente di ottenere un altro grafico a colonne che mostra la quantità di vendite in base alla categoria di prodotti.
 1. Con il nuovo grafico a colonne selezionato, nel riquadro **Visualizzazioni** selezionare **Grafico a torta** e quindi ridimensionare il grafico e posizionarlo accanto al grafico ricavi per colonna categoria.
 
     ![Screenshot che mostra un grafico a torta che mostra la quantità di vendite per categoria.](images/category-pie-chart.png)
 
-1. Selezionare un'area vuota del report e quindi nel riquadro **Campi** selezionare il campo **Città** nella tabella **clienti** e il campo **Ricavi** nella tabella **ordini**. Il risultato è una mappa che mostra i ricavi di vendita per città. Ridisporre e ridimensionare le visualizzazioni come necessario:
+1. Selezionare un'area vuota del report e quindi nel riquadro **Dati** selezionare il campo **Città** nella tabella **clienti** e quindi selezionare il campo **Ricavi** nella tabella **ordini** . Il risultato è una mappa che mostra i ricavi di vendita per città. Ridisporre e ridimensionare le visualizzazioni come necessario:
 
     ![Screenshot che mostra una mappa che mostra i ricavi per città.](images/revenue-map.png)
 
