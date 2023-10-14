@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of real-time analytics
 ---
 
-# <a name="explore-azure-stream-analytics"></a>Esplorare Analisi di flusso di Azure
+# Esplorare Analisi di flusso di Azure
 
 In questo esercizio si effettuerà il provisioning di un processo di Analisi di flusso di Azure nella sottoscrizione di Azure e lo si userà per elaborare un flusso di dati in tempo reale.
 
 Il completamento di questo lab richiederà circa **15** minuti.
 
-## <a name="before-you-start"></a>Prima di iniziare
+## Prima di iniziare
 
 Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free) con accesso di livello amministrativo.
 
-## <a name="create-azure-resources"></a>Creare le risorse di Azure
+## Creare le risorse di Azure
 
 1. Accedere alla sottoscrizione di Azure nel [portale di Azure](https://portal.azure.com) usando le credenziali della sottoscrizione di Azure.
 
@@ -40,6 +40,8 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
     bash setup.sh
     ```
 
+    > Ignorare eventuali messaggi di avviso relativi alle modifiche future e alle funzionalità sperimentali.
+
     Attendere l'esecuzione dello script ed eseguire le azioni seguenti:
 
     1. Installa le estensioni dell'interfaccia della riga di comando di Azure necessarie per creare risorse (*è possibile ignorare eventuali avvisi sulle estensioni sperimentali*)
@@ -48,7 +50,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
     1. Crea un *account di Archiviazione di Azure*, che verrà usato per archiviare i dati elaborati.
     1. Crea un processo di *Analisi di flusso di Azure*, che elaborerà i dati in ingresso nel dispositivo in tempo reale e scriverà i risultati nell'account di archiviazione.
 
-## <a name="explore-the-azure-resources"></a>Esplorare le risorse di Azure
+## Esplorare le risorse di Azure
 
 1. Nella home page del [portale di Azure](https://portal.azure.com?azure-portal=true) selezionare **Gruppi di risorse** per visualizzare i gruppi di risorse presenti nella sottoscrizione. Deve essere incluso anche il gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...** * identificato dallo script di installazione.
 2. Selezionare il gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...** * e consultare le risorse contenute, che devono includere:
@@ -58,11 +60,11 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
     Se queste tre risorse non sono tutte elencate, fare clic sul pulsante **&#8635; Aggiorna** fino a quando non vengono visualizzate.
 
- 3. Selezionare il processo di Analisi di flusso **stream*xxxxxxxxxxxxx*** e visualizzare le informazioni nella relativa pagina **Panoramica**, osservando in particolare i dettagli seguenti:
+3. Selezionare il processo di Analisi di flusso **stream*xxxxxxxxxxxxx*** e visualizzare le informazioni nella relativa pagina **Panoramica**, osservando in particolare i dettagli seguenti:
     - Nel processo è presente sia un *input* denominato **iotinput** sia un *output* denominato **bloboutput**. Questi elementi fanno riferimento all'account di Archiviazione e hub IoT creato dallo script di installazione.
     - Nel processo è presente anche una *query*, che legge i dati dall'input **iotinput** e li aggrega contando il numero di messaggi elaborati ogni 10 secondi; i risultati vengono scritti nell'output **bloboutput**.
 
-## <a name="use-the-resources-to-analyze-streaming-data"></a>Usare le risorse per analizzare i dati di streaming
+## Usare le risorse per analizzare i dati di streaming
 
 1. Nella parte superiore della pagina **Panoramica** del processo di Analisi di flusso, selezionare il pulsante **&#9655; Avvia** e nel riquadro **Avvia processo** selezionare **Avvia** per avviare il processo.
 2. Attendere la notifica che il processo di streaming è stato avviato correttamente.
