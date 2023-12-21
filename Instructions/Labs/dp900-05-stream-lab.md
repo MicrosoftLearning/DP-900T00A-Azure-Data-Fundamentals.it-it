@@ -14,7 +14,7 @@ Il completamento di questo lab richiederà circa **15** minuti.
 
 Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free) con accesso di livello amministrativo.
 
-## Creare le risorse di Azure
+## Creare risorse Azure
 
 1. Accedere alla sottoscrizione di Azure nel [portale di Azure](https://portal.azure.com) usando le credenziali della sottoscrizione di Azure.
 
@@ -52,8 +52,8 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 ## Esplorare le risorse di Azure
 
-1. Nella home page del [portale di Azure](https://portal.azure.com?azure-portal=true) selezionare **Gruppi di risorse** per visualizzare i gruppi di risorse presenti nella sottoscrizione. Deve essere incluso anche il gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...** * identificato dallo script di installazione.
-2. Selezionare il gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...** * e consultare le risorse contenute, che devono includere:
+1. Nella home page del [portale di Azure](https://portal.azure.com?azure-portal=true) selezionare **Gruppi di risorse** per visualizzare i gruppi di risorse presenti nella sottoscrizione. Deve essere incluso anche il gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...*** identificato dallo script di installazione.
+2. Selezionare il gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...*** e consultare le risorse contenute, che devono includere:
     - Un *hub IoT* denominato **iothub*xxxxxxxxxxxxx***, che consente di ricevere i dati in ingresso nel dispositivo.
     - Un *account di Archiviazione* denominato **store*xxxxxxxxxxxx***, in cui verranno scritti i risultati del processo di elaborazione dati.
     - Un *processo di Analisi di flusso di Azure* denominato **stream*xxxxxxxxxxxxx***, che consente di elaborare i dati di streaming.
@@ -80,7 +80,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
     Device simulation in progress: 6%|#    | 7/120 [00:08<02:21, 1.26s/it]
     ```
 
-5. Durante l'esecuzione della simulazione, tornare al portale di Azure, accedere alla pagina del gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...** * e selezionare l'account di archiviazione **store*xxxxxxxxxxxx***.
+5. Durante l'esecuzione della simulazione, tornare al portale di Azure, accedere alla pagina del gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...*** e selezionare l'account di archiviazione **store*xxxxxxxxxxxx***.
 6. Nel riquadro a sinistra del pannello dell'account di archiviazione selezionare la scheda **Contenitori**.
 7. Aprire il contenitore **data**.
 8. Nel contenitore **data** passare alla gerarchia di cartelle in cui è contenuta una cartella relativa all'anno corrente, con sottocartelle per il mese, il giorno e l'ora.
@@ -97,7 +97,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 11. Usare il pulsante **&#8635; Aggiorna** per aggiornare il file, osservando come i risultati aggiuntivi vengano scritti nel file mentre il processo di Analisi di flusso elabora i dati del dispositivo in tempo reale, man mano che vengono trasmessi dal dispositivo all'hub IoT.
 12. Tornare ad Azure Cloud Shell e attendere il completamento della simulazione del dispositivo (dovrebbe richiedere circa 3 minuti).
 13. Tornare al portale di Azure, aggiornare ancora una volta il file per visualizzare il set completo dei risultati generati durante la simulazione.
-14. Tornare al gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...** * e riaprire il processo di Analisi di flusso **stream*xxxxxxxxxxxxx***.
+14. Tornare al gruppo di risorse **learn*xxxxxxxxxxxxxxxxx...*** e riaprire il processo di Analisi di flusso **stream*xxxxxxxxxxxxx***.
 15. Nella parte superiore della pagina del processo di Analisi di flusso usare il pulsante **&#11036; Arresta** per interrompere il processo, confermando quando richiesto.
 
 > **Nota**: se è stata completata l'esplorazione della soluzione di streaming, eliminare il gruppo di risorse creato in questo esercizio.
