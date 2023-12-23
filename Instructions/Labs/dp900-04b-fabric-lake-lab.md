@@ -6,89 +6,89 @@ lab:
 
 # Esplorare l'analisi dei dati in Microsoft Fabric
 
-In questo esercizio si esaminerà l'inserimento e l'analisi dei dati in microsoft Fabric Lakehouse.
+In questo esercizio saranno esaminati l'inserimento e l'analisi dei dati in un lakehouse di Microsoft Fabric.
 
 Il completamento di questo lab richiederà circa **25** minuti.
 
-> **Nota**: è necessaria una licenza di Microsoft Fabric per completare questo esercizio. Per informazioni dettagliate su come abilitare una licenza di valutazione gratuita di Fabric, vedere [Introduzione a Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) . Per eseguire questa operazione sarà necessario *un account* *aziendale o dell'istituto di istruzione* Microsoft. Se non ne hai uno, puoi [iscriverti per una versione di valutazione di Microsoft Office 365 E3 o successiva](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
+> **Nota**: per completare questo esercizio è necessaria una licenza di Microsoft Fabric. Per informazioni dettagliate su come abilitare una licenza di prova gratuita di Fabric, vedere [Introduzione a Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial). Per eseguire questa operazione, è necessario anche un account Microsoft *dell'istituto di istruzione* o *aziendale*. Se non è disponibile, è possibile [iscriversi per ottenere una versione di valutazione di Microsoft Office 365 E3 o versione successiva](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
 
 ## Creare un'area di lavoro
 
 Prima di usare i dati in Fabric, creare un'area di lavoro con la versione di valutazione di Fabric abilitata.
 
 1. Accedere a [Microsoft Fabric](https://app.fabric.microsoft.com) all'indirizzo `https://app.fabric.microsoft.com`.
-2. Nella barra dei menu a sinistra selezionare **Aree** di lavoro (l'icona è simile a &#128455;).
-3. Creare una nuova area di lavoro con un nome scelto, selezionando una modalità di licenza nella sezione **Avanzate** che include capacità infrastruttura (*Versione di valutazione*, *Premium* o *Fabric*).
+2. Nella barra dei menu a sinistra selezionare **Aree di lavoro** (l'icona è simile a &#128455;).
+3. Creare una nuova area di lavoro con un nome di propria scelta, selezionando una modalità di licenza nella sezione **Avanzate** che include la capacità di Fabric (*versione di valutazione*, *Premium* o *Fabric*).
 4. Quando si apre la nuova area di lavoro, deve essere vuota.
 
-    ![Screenshot di un'area di lavoro vuota in Power BI.](./images/new-workspace.png)
+    ![Screenshot di un'area di lavoro vuota Power BI.](./images/new-workspace.png)
 
 ## Creare una lakehouse
 
-Ora che si dispone di un'area di lavoro, è possibile passare all'esperienza di *progettazione dei dati* nel portale e creare una data lakehouse per i file di dati.
+Ora che si dispone di un'area di lavoro, è possibile passare all'esperienza di *Ingegneria dei dati* nel portale e creare un data lakehouse per i file di dati.
 
-1. Nella parte inferiore sinistra del portale passare all'esperienza **di Ingegneria dei dati**.
+1. Nella parte inferiore sinistra del portale passare all'esperienza di **Ingegneria dei dati**.
 
-    ![Screenshot del menu del commutatore di esperienza.](./images/fabric-switcher.png)
+    ![Screenshot del menu del selettore dell'esperienza.](./images/fabric-switcher.png)
 
-    La home page dell'ingegneria dei dati include riquadri per creare asset di ingegneria dei dati comunemente usati.
+    La home page di ingegneria dei dati include riquadri per creare asset di ingegneria dei dati di uso comune.
 
-2. Nella home page **Progettazione dati** creare un nuovo **Lakehouse** con un nome di propria scelta.
+2. Nella home page di **Ingegneria dei dati** creare un nuovo **Lakehouse** con un nome di propria scelta.
 
-    Dopo un minuto o così, verrà creato un nuovo lakehouse:
+    Dopo circa un minuto, verrà creata un nuovo lakehouse:
 
-    ![Screenshot di una nuova lakehouse.](./images/new-lakehouse.png)
+    ![Screenshot di un nuovo lakehouse.](./images/new-lakehouse.png)
 
-3. Visualizzare il nuovo lakehouse e notare che il riquadro Esplora **lakehouse** a sinistra consente di esplorare tabelle e file nella lakehouse:
-    - La cartella **Tabelle** contiene tabelle che è possibile eseguire query tramite SQL. Le tabelle in una Microsoft Fabric lakehouse si basano sul formato di file *Delta Lake* Open Source comunemente usato in Apache Spark.
-    - La cartella **File** contiene i file di dati nell'archivio OneLake per la lakehouse che non sono associati alle tabelle delta gestite. È anche possibile creare *collegamenti* in questa cartella per fare riferimento ai dati archiviati esternamente.
+3. Visualizzare il nuovo lakehouse e tenere presente che il riquadro **Lakehouse Explorer** a sinistra consente di esplorare tabelle e file al suo interno:
+    - La cartella **Tabelle** contiene tabelle su cui è possibile eseguire query tramite SQL. Le tabelle in un lakehouse di Microsoft Fabric si basano sul formato di file open source *Delta Lake* comunemente usato in Apache Spark.
+    - La cartella **File** contiene i file di dati nell'archivio OneLake del lakehouse che non sono associati alle tabelle delta gestite. In questa cartella è anche possibile creare *scelte rapide* per fare riferimento ai dati archiviati esternamente.
 
-    Attualmente non sono presenti tabelle o file nella lakehouse.
+    Attualmente non sono presenti tabelle o file nel lakehouse.
 
-## Inserire dati
+## Inserire i dati
 
-Un modo semplice per inserire i dati consiste nell'usare un'attività **Copia dati** in una pipeline per estrarre i dati da un'origine e copiarla in un file in lakehouse.
+Un modo semplice per inserire dati consiste nell'usare un'attività **Copia dati** in una pipeline per estrarre i dati da un'origine e copiarli in un file nel lakehouse.
 
-1. Nella **home** page per il lakehouse selezionare **Nuova pipeline** di **dati** e creare una nuova pipeline di dati denominata **Inserimento dati**.
-1. Nella procedura guidata **Copia dati** selezionare il set di dati **di esempio Wide World Importers** nella pagina **Scegli un'origine dati dati**.
+1. Nella **home page** del lakehouse, dal menu **Recupera dati**, scegliere **Nuova pipeline di dati** e creare una nuova pipeline di dati denominata **Inserimento dati di vendita**.
+1. Nella pagina **Scegli un'origine dati** della procedura guidata **Copia dati** selezionare il set di dati di esempio **Retail Data Model from Wide World Importers**.
 
     ![Screenshot della pagina Scegli origine dati.](./images/choose-data-source.png)
 
-1. Selezionare **Avanti** e visualizzare le tabelle **nell'origine dati nella pagina Connetti all'origine dati** .
-1. Selezionare la tabella **dimension_stock_item** che contiene i record dei prodotti. Selezionare **Quindi Avanti** per passare alla pagina **Scegli destinazione dati** .
-1. Nella pagina **Scegli destinazione dati** selezionare la lakehouse esistente. Fare quindi clic su **Avanti**.
+1. Selezionare **Avanti** e visualizzare le tabelle nell'origine dati nella pagina **Connessione all'origine dati**.
+1. Selezionare la tabella **dimension_stock_item** che contiene i record dei prodotti. Quindi selezionare **Avanti** per passare alla pagina **Scegli destinazione dati**.
+1. Nella pagina **Scegli destinazione dati** selezionare il lakehouse esistente. Quindi seleziona **Avanti**.
 1. Impostare le opzioni di destinazione dati seguenti e quindi selezionare **Avanti**:
-    - **Cartella radice**: Tabelle
-    - **Impostazioni di caricamento: Caricare** in una nuova tabella
+    - **Cartella radice**: tabelle
+    - **Impostazioni di caricamento**: caricare in una nuova tabella
     - **Nome tabella di destinazione**: dimension_stock_item
-    - **Mapping di colonne**: *lasciare i mapping predefiniti come è*
-    - **Abilitare la partizione**: *Deselezionata*
-1. Nella pagina **Rivedi e salva** assicurarsi che l'opzione **Avvia trasferimento dati sia** selezionata immediatamente e quindi selezionare **Salva + Esegui**.
+    - **Mapping delle colonne**: *lasciare invariati i mapping predefiniti*
+    - **Abilita partizione**: *deselezionata*
+1. Nella pagina **Rivedi e salva** verificare che l'opzione **Avvia trasferimento dati immediatamente** sia selezionata e quindi selezionare **Salva e Esegui**.
 
-    Viene creata una nuova pipeline contenente un'attività **Copia dati** , come illustrato di seguito:
+    Viene creata una nuova pipeline contenente un'attività **Copia dati**, come illustrato di seguito:
 
     ![Screenshot di una pipeline con un'attività Copia dati.](./images/copy-data-pipeline.png)
 
-    Quando la pipeline inizia a essere eseguita, è possibile monitorare lo stato nel riquadro **Output** nella finestra di progettazione della pipeline. Usare l'icona **&#8635;** (*aggiornamento*) per aggiornare lo stato e attendere fino a quando non è riuscita.
+    Quando l'esecuzione della pipeline viene avviata, è possibile monitorarne lo stato nel riquadro **Output** nella finestra di progettazione della pipeline. Utilizzare l'icona **↻** (*Aggiorna*) per aggiornare lo stato e attendere che abbia esito positivo.
 
-1. Nella barra dei menu dell'hub a sinistra selezionare la tua lakehouse.
-1. Nella **home** page, nel riquadro Esplora **lakehouse** espandere **Tabelle** e verificare che sia stata creata la tabella **dimension_stock_item** .
+1. Nella barra dei menu dell'hub a sinistra selezionare il lakehouse.
+1. Nel riquadro **Esplora lakehouse** della **home page** espandere **Tabelle** e verificare che la tabella **dimension_stock_item** sia stata creata.
 
-    > **Nota**: se la nuova tabella è *elencata come non identificata*, usare il pulsante **Aggiorna** nella barra degli strumenti lakehouse per aggiornare la visualizzazione.
+    > **Nota**: se la nuova tabella è elencata come *non identificata*, usare il pulsante **Aggiorna** nella barra degli strumenti del lakehouse per aggiornare la visualizzazione.
 
 1. Selezionare la tabella **dimension_stock_item** per visualizzarne il contenuto.
 
     ![Screenshot della tabella dimension_stock_item.](./images/dimProduct.png)
 
-## Eseguire query sui dati in una lakehouse
+## Eseguire query sui dati nel lakehouse
 
-Dopo aver inserito i dati in una tabella nella lakehouse, è possibile usare SQL per eseguirne una query.
+Ora che i dati sono stati inseriti in una tabella nel lakehouse, è possibile usare SQL per eseguire le query.
 
-1. Nella parte superiore destra della pagina Lakehouse passare **all'endpoint SQL** per la tua lakehouse.
+1. Nella parte superiore destra della pagina Lakehouse passare all'**endpoint SQL** del lakehouse.
 
-    ![Screenshot del menu dell'endpoint SQL.](./images/endpoint-switcher.png)
+    ![Screenshot del menu endpoint SQL.](./images/endpoint-switcher.png)
 
-1. Nella barra degli strumenti selezionare **Nuova query SQL**. Immettere quindi il codice SQL seguente nell'editor di query:
+1. Selezionare **Nuova query SQL** sulla barra degli strumenti. Nel riquadro dell'editor di query, immettere il seguente codice SQL:
 
     ```sql
     SELECT Brand, COUNT(StockItemKey) AS Products
@@ -96,35 +96,35 @@ Dopo aver inserito i dati in una tabella nella lakehouse, è possibile usare SQL
     GROUP BY Brand
     ```
 
-1. Selezionare il pulsante **&#9655; Esegui** per eseguire la query e esaminare i risultati, che dovrebbero rivelare che sono presenti due valori di marca (*N/A* e *Northwind*) e visualizzare il numero di prodotti in ognuno.
+1. Selezionare il pulsante **▷ Esegui** per eseguire la query ed esaminare i risultati, che dovrebbero evidenziare che sono presenti due valori di marchio (*N/A* e *Northwind*) e mostrare il numero di prodotti in ognuno.
 
     ![Screenshot di una query SQL.](./images/sql-query.png)
 
-## Visualizzare i dati in una lakehouse
+## Visualizzare i dati in un lakehouse
 
-Microsoft Fabric lakehouses organizza tutte le tabelle in un modello di dati, che è possibile usare per creare visualizzazioni e report.
+I lakehouse di Microsoft Fabric organizzano tutte le tabelle in un modello di dati, che è possibile usare per creare visualizzazioni e report.
 
-1. Nella parte inferiore sinistra della pagina, nel riquadro **Esplora** risorse selezionare la scheda **Modello** per visualizzare il modello di dati per le tabelle nella lakehouse (in questo caso è presente una sola tabella).
+1. Nella parte inferiore sinistra della pagina, nel riquadro **Esplora risorse** selezionare la scheda **Modello** per visualizzare il modello di dati per le tabelle nel lakehouse (in questo caso è presente una sola tabella).
 
-    ![Screenshot della pagina del modello in un'infrastruttura lakehouse.](./images/fabric-model.png)
+    ![Screenshot della pagina del modello in un lakehouse di Fabric.](./images/fabric-model.png)
 
-1. Nella barra degli strumenti selezionare **Nuovo report** per aprire una nuova scheda del browser contenente la finestra di progettazione report di Power BI.
+1. Nella barra degli strumenti selezionare **Nuovo report** per aprire una nuova scheda del browser contenente la finestra di progettazione dei report di Power BI.
 1. Nella finestra di progettazione report:
-    1. Nel riquadro **Dati** espandere la tabella **dimension_stock_item** e selezionare i campi **Brand** e **StockItemKey** .
-    1. Nel riquadro **Visualizzazioni** selezionare la visualizzazione grafico a **barre in pila** (è la prima elencata). Assicurarsi quindi che **l'asse Y** contenga il campo **Brand** e modificare l'aggregazione **nell'asse X** in **Count** in modo che contenga il campo **Count of StockItemKey** . Infine, ridimensionare la visualizzazione nell'area di disegno del report per riempire lo spazio disponibile.
+    1. Nel riquadro **Dati** espandere la tabella **dimension_stock_item** e selezionare i campi **marchio** e **StockItemKey**.
+    1. Nel riquadro **Visualizzazioni** selezionare la visualizzazione **Grafico a barre in pila** (è la prima dell'elenco). Assicurarsi quindi che l'**asse Y** contenga il campo **Marchio** e modificare l'aggregazione nell'**asse X** in **Conteggio** in modo che contenga il campo **Conteggio di StockItemKey**. Infine, ridimensionare la visualizzazione nell'area di lavoro del report per riempire lo spazio disponibile.
 
         ![Screenshot di un report di Power BI.](./images/fabric-report.png)
 
-    > **Suggerimento**: è possibile usare le icone per nascondere i **>>** riquadri della finestra di progettazione report per visualizzare più chiaramente il report.
+    > **Suggerimento**: è possibile usare le icone **>>** per nascondere i riquadri di Progettazione report per visualizzare il report in modo più chiaro.
 
-1. Nel menu **File** selezionare **Salva** per salvare il report come **Report quantità marchio** nell'area di lavoro Fabric.
+1. Scegliere **Salva** dal menu **File** per salvare il report come **Report quantità marchio** nell'area di lavoro di Fabric.
 
-    È ora possibile chiudere la scheda del browser contando il report per tornare alla tua lakehouse. È possibile trovare il report nella pagina per l'area di lavoro nel portale di Microsoft Fabric.
+    È ora possibile chiudere la scheda del browser che contiene il report per tornare al lakehouse. Il report è disponibile nella pagina dell'area di lavoro nel portale di Microsoft Fabric.
 
 ## Pulire le risorse
 
 Se è stata completata l'esplorazione di Microsoft Fabric, è possibile eliminare l'area di lavoro creata per questo esercizio.
 
-1. Nella barra a sinistra selezionare l'icona per l'area di lavoro per visualizzare tutti gli elementi contenuti.
+1. Nella barra a sinistra selezionare l'icona dell'area di lavoro per visualizzare tutti gli elementi contenuti.
 2. Nel menu **...** sulla barra degli strumenti selezionare **Impostazioni area di lavoro**.
-3. Nella sezione **Altre** selezionare **Rimuovi questa area di lavoro**.
+3. Nella sezione **Altro** selezionare **Rimuovi questa area di lavoro**.

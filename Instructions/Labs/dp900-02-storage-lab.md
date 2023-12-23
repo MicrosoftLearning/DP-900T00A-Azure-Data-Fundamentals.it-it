@@ -21,7 +21,7 @@ Il primo passaggio per usare Archiviazione di Azure prevede il provisioning di u
 1. Accedere al [portale di Azure](https://portal.azure.com?azure-portal=true) se questa operazione non è già stata eseguita.
 1. Nella home page del portale di Azure selezionare **&#65291; Crea una risorsa** nell'angolo in alto a sinistra e cercare *Account di archiviazione*. Nella pagina **Account di archiviazione** risultante selezionare **Crea**.
 1. Immettere i valori seguenti nella pagina **Crea un account di archiviazione**:
-    - **Sottoscrizione** Selezionare la sottoscrizione di Azure.
+    - **Sottoscrizione**: selezionare una sottoscrizione di Azure.
     - **Gruppo di risorse**: creare un nuovo gruppo di risorse con un nome di propria scelta.
     - **Nome account di archiviazione**: immettere un nome univoco per l'account di archiviazione usando lettere minuscole e numeri.
     - **Area**: selezionare qualsiasi posizione disponibile.
@@ -30,7 +30,7 @@ Il primo passaggio per usare Archiviazione di Azure prevede il provisioning di u
 
 1. Selezionare **Avanti: Avanzate >** e visualizzare le opzioni di configurazione avanzate. In particolare, si noti che qui è possibile abilitare lo spazio dei nomi gerarchico per supportare Azure Data Lake Storage Gen2. Lasciare **<u>deselezionata</u>** questa opzione (la si abiliterà in seguito) e quindi selezionare **Avanti: Rete >** per visualizzare le opzioni di rete per l'account di archiviazione.
 1. Selezionare **Avanti: Protezione dei dati >** e quindi nella sezione **Recupero** <u>de</u>selezionare tutte le opzioni di **Abilita eliminazione temporanea**. Queste opzioni conservano i file eliminati per il recupero successivo, ma possono causare problemi in un secondo momento quando si abilita lo spazio dei nomi gerarchico.
-1. Continuare con le pagine successive **di >** senza modificare alcuna delle impostazioni predefinite e quindi nella pagina  **Rivedi** attendere che le selezioni vengano convalidate e selezionare **Crea** per creare l'account di archiviazione di Azure.
+1. Continuare a fare clic su **Avanti >** nelle pagine rimanenti senza modificare nessuna delle impostazioni predefinite e quindi nella pagina **Rivedi** attendere la convalida delle selezioni e selezionare **Crea** per creare l'account di archiviazione di Azure.
 1. Attendere il completamento della distribuzione. Passare quindi alla risorsa distribuita.
 
 ## Esplorare l'archivio BLOB
@@ -42,7 +42,7 @@ Dopo aver creato un account di archiviazione di Azure, è possibile creare un co
     *Se il file JSON viene visualizzato nel browser, salvare la pagina come **product1.json**.*
 
 1. Nella pagina del portale di Azure del contenitore di archiviazione, sulla sinistra, nella sezione **Archiviazione dati** selezionare **Contenitori**.
-1. Nella pagina **Contenitori** selezionare **&#65291; Contenitore** e aggiungere un nuovo contenitore denominato **data** con un livello di accesso pubblico **Privato (nessun accesso anonimo)** .
+1. Nella pagina **Contenitori** selezionare **&#65291; Contenitore** e aggiungere un nuovo contenitore denominato **data** con un livello di accesso pubblico **Privato (nessun accesso anonimo)**.
 1. Una volta creato il contenitore **data**, verificare che sia elencato nella pagina **Contenitori**.
 1. Nel riquadro a sinistra, nella sezione in alto selezionare **Browser archiviazione**. Questa pagina fornisce un'interfaccia basata su browser che consente di lavorare con i dati nell'account di archiviazione.
 1. Nella pagina del browser archiviazione selezionare **Contenitori BLOB** e verificare che il contenitore **data** sia elencato.
@@ -89,7 +89,7 @@ File di Azure consente di creare condivisioni file basate sul cloud.
 1. Nella parte superiore della pagina selezionare **Connetti**, quindi nel riquadro **Connetti** si noti che esistono schede per i sistemi operativi comuni (Windows, Linux e macOS) contenenti script che è possibile eseguire per connettersi alla cartella condivisa da un computer client.
 1. Chiudere il riquadro **Connetti** e quindi chiudere la pagina **files** per tornare alla pagina **Condivisioni file** dell'account di archiviazione di Azure.
 
-## Esplorare Tabelle di Azure
+## Esplorare le tabelle di Azure
 
 Tabelle di Azure fornisce un archivio di coppie chiave/valore per le applicazioni che, pur dovendo archiviare i valori dei dati, non necessitano della funzionalità completa e della struttura di un database relazionale.
 
@@ -104,27 +104,27 @@ Tabelle di Azure fornisce un archivio di coppie chiave/valore per le applicazion
     - **RowKey**: 1
 1. Selezionare **Aggiungi proprietà** e creare una nuova proprietà con i valori seguenti:
 
-    |Nome proprietà | Type | valore |
+    |Nome della proprietà | Tipo | valore |
     | ------------ | ---- | ----- |
     | Nome | string | Widget |
 
 1. Aggiungere una seconda proprietà con i valori seguenti:
 
-    |Nome proprietà | Type | valore |
+    |Nome della proprietà | Tipo | valore |
     | ------------ | ---- | ----- |
-    | Prezzo | Double | 2,99 |
+    | Price | Double | 2,99 |
 
 1. Selezionare **Inserisci** per inserire una riga per la nuova entità nella tabella.
 1. Nel browser archiviazione verificare che una riga sia stata aggiunta alla tabella **products** e che sia stata creata una colonna **Timestamp** per indicare quando la riga è stata modificata per l'ultima volta.
 1. Aggiungere un'altra entità alla tabella **products** con le proprietà seguenti:
 
-    |Nome proprietà | Type | valore |
+    |Nome della proprietà | Tipo | valore |
     | ------------ | ---- | ----- |
-    | PartitionKey | string | 1 |
-    | RowKey | string | 2 |
+    | PartitionKey | Stringa | 1 |
+    | RowKey | Stringa | 2 |
     | Nome | string | Kniknak |
-    | Prezzo | Double | 1.99 |
-    | Non disponibile | Boolean | true |
+    | Price | Double | 1,99 |
+    | Sospeso | Boolean | true |
 
 1. Dopo aver inserito la nuova entità, verificare che nella tabella sia visualizzata una riga contenente il prodotto fuori produzione.
 
