@@ -20,20 +20,20 @@ Per usare Synapse Analytics, è necessario effettuare il provisioning di una ris
 
 1. Aprire il portale di Azure all'indirizzo del [portale di Azure](https://portal.azure.com?azure-portal=true) ed eseguire l'accesso usando le credenziali associate alla sottoscrizione di Azure.
 
-    >                 **Nota**: assicurarsi di essere nella directory relativa alla sottoscrizione personale, indicata in alto a destra sotto l'ID utente. In caso contrario, selezionare l'icona utente e passare alla directory appropriata.
+    > **Nota**: assicurarsi di essere nella directory relativa alla sottoscrizione personale, indicata in alto a destra sotto l'ID utente. In caso contrario, selezionare l'icona utente e passare alla directory appropriata.
 
 2. Nella **home page** del portale di Azure usare l'icona **&#65291; Crea una risorsa** per creare una nuova risorsa.
 3. Cercare *Azure Synapse Analytics* e creare una nuova risorsa **Azure Synapse Analytics** con le impostazioni seguenti:
-    - **Sottoscrizione**: *la propria sottoscrizione di Azure*
+    - **Sottoscrizione**: *la sottoscrizione di Azure in uso*.
         - **Gruppo di risorse**: *creare un nuovo gruppo di risorse con un nome appropriato, ad esempio "synapse-rg"*
         - **Gruppo di risorse gestite**: *immettere un nome appropriato, ad esempio "synapse-managed-rg".*
-    - **Nome dell'area di lavoro**: *immettere un nome univoco dell'area di lavoro, ad esempio "synapse-ws-<nome_utente>* .
+    - **Nome dell'area di lavoro**: *immettere un nome univoco dell'area di lavoro, ad esempio "synapse-ws-<nome_utente>*.
     - **Area**: *selezionare qualsiasi area disponibile*.
-    - **Selezionare Data Lake Storage Gen 2**: dalla sottoscrizione 
-        - **Nome dell'account**: *creare un nuovo account con un nome univoco, ad esempio "datalake<nome_utente>"* .
-        - **Nome file system**: *creare un nuovo file system con un nome univoco, ad esempio "fs<nome_utente>"* .
+    - **Selezionare Data Lake Storage Gen 2**: dalla sottoscrizione
+        - **Nome dell'account**: *creare un nuovo account con un nome univoco, ad esempio "datalake<nome_utente>"*.
+        - **Nome file system**: *creare un nuovo file system con un nome univoco, ad esempio "fs<nome_utente>"*.
 
-    >                 **Nota**: per un'area di lavoro di Synapse Analytics sono necessari due gruppi di risorse nella sottoscrizione di Azure, uno per le risorse create in modo esplicito e un altro per le risorse gestite usate dal servizio. È inoltre necessario un account di archiviazione Data Lake in cui archiviare dati, script e altri artefatti.
+    > **Nota**: per un'area di lavoro di Synapse Analytics sono necessari due gruppi di risorse nella sottoscrizione di Azure, uno per le risorse create in modo esplicito e un altro per le risorse gestite usate dal servizio. È inoltre necessario un account di archiviazione Data Lake in cui archiviare dati, script e altri artefatti.
 
 4. Dopo aver immesso questi dettagli, selezionare **Rivedi e crea**, quindi selezionare **Crea** per creare l'area di lavoro.
 5. Attendere che venga creata l'area di lavoro. L'operazione può richiedere circa cinque minuti.
@@ -67,7 +67,7 @@ Per esplorare l'elaborazione dei flussi con Spark, si userà un notebook che con
 
 ## Eliminare le risorse di Azure
 
->                 **Nota**: se si intende completare altri esercizi che usano Azure Synapse Analytics, è possibile ignorare questa sezione. In caso contrario, seguire questa procedura per evitare costi di Azure non necessari.
+> **Nota**: se si intende completare altri esercizi che usano Azure Synapse Analytics, è possibile ignorare questa sezione. In caso contrario, seguire questa procedura per evitare costi di Azure non necessari.
 
 1. Chiudere la scheda del browser relativa a Synapse Studio senza salvare le modifiche e tornare al portale di Azure.
 1. Nella **home page** del portale di Azure selezionare **Gruppi di risorse**.

@@ -25,9 +25,9 @@ In questo esercizio si effettuerà il provisioning di una risorsa di Database di
     ![Screenshot delle opzioni di distribuzione di Database di Azure per PostgreSQL](images/postgresql-options.png)
 
 1. Immettere i valori seguenti nella pagina **Crea database SQL**:
-    - **Sottoscrizione** Selezionare la sottoscrizione di Azure.
+    - **Sottoscrizione**: selezionare una sottoscrizione di Azure.
     - **Gruppo di risorse**: creare un nuovo gruppo di risorse con un nome di propria scelta.
-    - **Nome server**: Immettere un nome univoco.
+    - **Nome server**: immettere un nome univoco.
     - **Area**: selezionare un'area nelle vicinanze.
     - **Versione di PostgreSQL**: lasciare invariata.
     - **Tipo di carico di lavoro**: selezionare **Sviluppo**.
