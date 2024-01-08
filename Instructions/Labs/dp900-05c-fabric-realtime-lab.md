@@ -35,9 +35,20 @@ Ora che si dispone di un'area di lavoro, è possibile creare un database KQL per
 
 2. Nella home page dell'analisi in tempo reale creare un nuovo **database KQL** con un nome a piacere.
 
-    Dopo alcuni minuti, verrà creato un nuovo database KQL:
+    ![Screenshot dell'editor RTA con Crea database KQL evidenziato.](./images/create-kql-db.png)
+
+   Verrà visualizzata una schermata del dashboard e quindi si seleziona il pulsante Database KQL nella parte superiore.
 
     ![Screenshot di un nuovo database KQL.](./images/kql-database.png)
+
+    Dopo aver selezionato, verrà visualizzata una ***finestra di dialogo Nuovo database*** KQL in cui verrà assegnato un nome al database KQL.
+
+    ![Screenshot di una nuova finestra di dialogo nome database KQL.](./images/name-kql-db.png)
+
+   - denominare il database, in questo scenario, è: `my_kql_db`
+   - fare clic su ***Crea***
+  
+    Dopo alcuni minuti, verrà creato un nuovo database KQL:
 
     Attualmente non sono presenti tabelle nel database.
 
@@ -91,7 +102,7 @@ L'eventstream popola continuamente una tabella nel database KQL, consentendo di 
     ```kql
     // This query returns the number of taxi pickups per hour
     ['taxi-data']
-    | summarize PickupCount = count() by bin(tpep_pickup_datetime, 1h)
+    | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
 1. Utilizzare il pulsante **▷ Esegui** per eseguire la query ed esaminare i risultati, che mostrano il numero di fermate per i passeggeri dei taxi per ogni ora.
