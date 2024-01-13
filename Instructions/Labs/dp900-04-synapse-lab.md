@@ -20,15 +20,15 @@ Per usare Azure Synapse Analytics, è necessario effettuare il provisioning di u
 
 1. Aprire il portale di Azure all'indirizzo [https://portal.azure.com](https://portal.azure.com?azure-portal=true) ed eseguire l'accesso usando le credenziali associate alla sottoscrizione di Azure.
 
-    >                 **Suggerimento**: assicurarsi di essere nella directory relativa alla sottoscrizione personale, indicata in alto a destra sotto l'ID utente. In caso contrario, selezionare l'icona utente e passare alla directory appropriata.
+    > **Suggerimento**: assicurarsi di essere nella directory relativa alla sottoscrizione personale, indicata in alto a destra sotto l'ID utente. In caso contrario, selezionare l'icona utente e passare alla directory appropriata.
 
 2. Nella **home page** del portale di Azure usare l'icona **&#65291; Crea una risorsa** per creare una nuova risorsa.
 3. Cercare *Azure Synapse Analytics* e creare una nuova risorsa **Azure Synapse Analytics** con le impostazioni seguenti:
-    - **Sottoscrizione**: *la propria sottoscrizione di Azure*
+    - **Sottoscrizione**: *la sottoscrizione di Azure in uso*.
         - **Gruppo di risorse**: *creare un nuovo gruppo di risorse con un nome appropriato, ad esempio "synapse-rg"*
         - **Gruppo di risorse gestite**: *immettere un nome appropriato, ad esempio "synapse-managed-rg".*
-    - **Nome dell'area di lavoro**: *immettere un nome univoco dell'area di lavoro, ad esempio "synapse-ws-<nome_utente>"* .
-    - **Area**: *selezionare una delle aree seguenti*: 
+    - **Nome dell'area di lavoro**: *immettere un nome univoco dell'area di lavoro, ad esempio "synapse-ws-<nome_utente>"*.
+    - **Area**: *selezionare una delle aree seguenti*:
         - Australia orientale
         - Stati Uniti centrali
         - Stati Uniti orientali 2
@@ -39,11 +39,11 @@ Per usare Azure Synapse Analytics, è necessario effettuare il provisioning di u
         - Europa occidentale
         - Stati Uniti occidentali
         - WestUS 2
-    - **Selezionare Data Lake Storage Gen 2**: dalla sottoscrizione 
-        - **Nome dell'account**: *creare un nuovo account con un nome univoco, ad esempio "datalake<nome_utente>"* .
-        - **Nome file system**: *creare un nuovo file system con un nome univoco, ad esempio "fs<nome_utente>"* .
+    - **Selezionare Data Lake Storage Gen 2**: dalla sottoscrizione
+        - **Nome dell'account**: *creare un nuovo account con un nome univoco, ad esempio "datalake<nome_utente>"*.
+        - **Nome file system**: *creare un nuovo file system con un nome univoco, ad esempio "fs<nome_utente>"*.
 
-    >                 **Nota**: per un'area di lavoro di Synapse Analytics sono necessari due gruppi di risorse nella sottoscrizione di Azure, uno per le risorse create in modo esplicito e un altro per le risorse gestite usate dal servizio. È inoltre necessario un account di archiviazione Data Lake in cui archiviare dati, script e altri artefatti.
+    > **Nota**: per un'area di lavoro di Synapse Analytics sono necessari due gruppi di risorse nella sottoscrizione di Azure, uno per le risorse create in modo esplicito e un altro per le risorse gestite usate dal servizio. È inoltre necessario un account di archiviazione Data Lake in cui archiviare dati, script e altri artefatti.
 
 4. Dopo aver immesso questi dettagli, selezionare **Rivedi e crea**, quindi selezionare **Crea** per creare l'area di lavoro.
 5. Attendere che venga creata l'area di lavoro. L'operazione può richiedere circa cinque minuti.
@@ -53,59 +53,59 @@ Per usare Azure Synapse Analytics, è necessario effettuare il provisioning di u
 
     ![Immagine che mostra il menu di Synapse Studio espanso per gestire le risorse ed eseguire attività di analisi dei dati](images/synapse-studio.png)
 
-## Inserire dati
+## Inserire i dati
 
 Una delle attività chiave che è possibile eseguire con Azure Synapse Analytics consiste nel definire *pipeline* che trasferiscono (e, se necessario, trasformano) i dati provenienti da un'ampia gamma di origini nell'area di lavoro per l'analisi.
 
 1. Nella **home page** di Synapse Studio selezionare **Inserisci** per aprire lo **strumento Copia dati**.
-2. Nel passaggio **Proprietà** dello strumento Copia dati verificare che le opzioni **Attività di copia predefinita** ed **Esegui una volta solo ora** siano selezionate e fare clic su **Avanti >** .
+2. Nel passaggio **Proprietà** dello strumento Copia dati verificare che le opzioni **Attività di copia predefinita** ed **Esegui una volta solo ora** siano selezionate e fare clic su **Avanti >**.
 3. Nel passaggio **Origine** selezionare le impostazioni seguenti nel passaggio secondario **Set di dati**:
     - **Tipo di origine**: Tutto
-    - **Connessione**: *creare una nuova connessione e selezionare **HTTP** nel riquadro **Nuova connessione** visualizzata nella scheda **Protocollo generico**. Continuare quindi e creare una connessione a un file di dati usando le impostazioni seguenti:*
+    - **Connessione**: *creare una nuova connessione e nel riquadro **Nuova connessione** visualizzato, nella scheda **Protocollo generico** selezionare **HTTP**. Continuare quindi con la creazione di una connessione a un file di dati usando le impostazioni seguenti:*
         - **Nome**: Prodotti AdventureWorks
         - **Descrizione**: Elenco prodotti tramite HTTP
         - **Connetti tramite runtime di integrazione**: AutoResolveIntegrationRuntime
         - **URL di base**: `https://raw.githubusercontent.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/master/Azure-Synapse/products.csv`
         - **Convalida certificato server**: abilitata
         - **Tipo di autenticazione**: Anonimo
-4. Dopo aver creato la connessione, nel passaggio secondario **Origine/Set di dati** verificare che siano selezionate le impostazioni seguenti e quindi selezionare **Avanti >** :
+4. Dopo aver creato la connessione, nel passaggio secondario **Origine/Set di dati** verificare che siano selezionate le impostazioni seguenti e quindi selezionare **Avanti >**:
     - **URL relativo**: *lasciare vuoto*
-    - **Metodo di richiesta**: GET
+    - **Metodo di richiesta**: GET.
     - **Intestazioni aggiuntive**: *lasciare vuoto*
     - **Copia binaria**: <u>de</u>selezionata
     - **Timeout della richiesta**: *lasciare vuoto*
     - **Numero massimo di connessioni simultanee**: *lasciare vuoto*
 5. Nel passaggio **Origine** selezionare **Anteprima dati** nel passaggio secondario **Configurazione** per visualizzare un'anteprima dei dati del prodotto che verranno inseriti nella pipeline e quindi chiudere l'anteprima.
-6. Dopo aver visualizzato l'anteprima dei dati, nel passaggio **Origine/Configurazione** verificare che siano selezionate le impostazioni seguenti e quindi selezionare **Avanti >** :
+6. Dopo aver visualizzato l'anteprima dei dati, nel passaggio **Origine/Configurazione** verificare che siano selezionate le impostazioni seguenti e quindi selezionare **Avanti >**:
     - **Formato file**: DelimitedText
-    - **Delimitatore di colonna**: virgola (,)
+    - **Delimitatore di colonna:** Virgola (,)
     - **Delimitatore di riga**: carattere di avanzamento riga (\n)
     - **Prima riga come intestazione**: selezionata
-    - **Tipo di compressione**: Nessuno
+    - **Tipo di compressione:** Nessuno
 7. Nel passaggio **Destinazione** selezionare le impostazioni seguenti nel passaggio secondario **Set di dati**:
     - **Tipo di destinazione**: Azure Data Lake Storage Gen 2
     - **Connessione**: *selezionare la connessione esistente all'archivio data lake, che è stato creato automaticamente quando si è creata l'area di lavoro.*
-8. Dopo aver selezionato la connessione, nel passaggio **Destinazione/Set di dati** verificare che siano selezionate le impostazioni seguenti e quindi selezionare **Avanti >** :
+8. Dopo aver selezionato la connessione, nel passaggio **Destinazione/Set di dati** verificare che siano selezionate le impostazioni seguenti e quindi selezionare **Avanti >**:
     - **Percorso cartella**: *passare alla cartella del file system*
     - **Nome file**: products.csv
     - **Comportamento di copia**: Nessuno
     - **Numero massimo di connessioni simultanee**: *lasciare vuoto*
     - **Dimensioni blocco (MB)**: *lasciare vuoto*
-9. Nel passaggio **Destinazione** assicurarsi che siano selezionate le proprietà seguenti nel passaggio secondario **Configurazione**. Quindi selezionare **Avanti >** :
+9. Nel passaggio **Destinazione** assicurarsi che siano selezionate le proprietà seguenti nel passaggio secondario **Configurazione**. Quindi selezionare **Avanti >**:
     - **Formato file**: DelimitedText
-    - **Delimitatore di colonna**: virgola (,)
+    - **Delimitatore di colonna:** Virgola (,)
     - **Delimitatore di riga**: carattere di avanzamento riga (\n)
     - **Aggiungi intestazione al file**: selezionata
-    - **Tipo di compressione**: Nessuno
+    - **Tipo di compressione:** Nessuno
     - **Numero massimo di righe per file**: *lasciare vuoto*
     - **Prefisso nome file**: *lasciare vuoto*
-10. Nel passaggio **Impostazioni** immettere le impostazioni seguenti e quindi selezionare **Avanti >** :
+10. Nel passaggio **Impostazioni** immettere le impostazioni seguenti e quindi selezionare **Avanti >**:
     - **Nome attività**: Copia prodotti
     - **Descrizione attività**: Copia dei dati sui prodotti
     - **Tolleranza di errore**: *lasciare vuoto*
     - **Abilita registrazione**: <u>de</u>selezionata
     - **Abilita staging**: <u>de</u>selezionata
-11. Nel passaggio **Rivedere e completare** leggere il riepilogo nel passaggio secondario **Rivedere** e quindi fare clic su **Avanti >** .
+11. Nel passaggio **Rivedere e completare** leggere il riepilogo nel passaggio secondario **Rivedere** e quindi fare clic su **Avanti >**.
 12. Nel passaggio secondario **Distribuzione** attendere la distribuzione della pipeline e quindi scegliere **Fine**.
 13. In Synapse Studio selezionare la pagina **Monitoraggio** e nella scheda **Esecuzioni della pipeline** attendere che la pipeline **Copia prodotti** sia completata con stato **Riuscito** (è possibile usare il pulsante **&#8635; Aggiorna** nella pagina Esecuzioni della pipeline per aggiornare lo stato).
 14. Nella pagina **Dati** selezionare la scheda **Collegato** ed espandere la gerarchia di **Azure Data Lake Storage Gen 2** fino a visualizzare la risorsa di archiviazione file per l'area di lavoro di Synapse. Selezionare quindi la risorsa di archiviazione file per verificare che un file denominato **products.csv** sia stato copiato in questo percorso, come illustrato di seguito:
@@ -138,8 +138,8 @@ Dopo aver inserito alcuni dati nell'area di lavoro, è possibile usare Synapse A
 
     | C1 | c2 | c3 | c4 |
     | -- | -- | -- | -- |
-    | ProductID | ProductName | Category | ListPrice |
-    | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399,9900 |
+    | ProductID | ProductName | Categoria | ListPrice |
+    | 771 | Mountain-100 argento, 38 | Mountain Bikes | 3399,9900 |
     | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399,9900 |
     | ... | ... | ... | ... |
 
@@ -159,9 +159,9 @@ Dopo aver inserito alcuni dati nell'area di lavoro, è possibile usare Synapse A
 
     Ora i risultati saranno simili ai seguenti:
 
-    | ProductID | ProductName | Category | ListPrice |
+    | ProductID | ProductName | Categoria | ListPrice |
     | -- | -- | -- | -- |
-    | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399,9900 |
+    | 771 | Mountain-100 argento, 38 | Mountain Bikes | 3399,9900 |
     | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399,9900 |
     | ... | ... | ... | ... |
 
@@ -182,7 +182,7 @@ Dopo aver inserito alcuni dati nell'area di lavoro, è possibile usare Synapse A
 
 7. Eseguire la query modificata, che dovrebbe restituire un set di risultati contenente il numero di prodotti in ciascuna categoria, come illustrato di seguito:
 
-    | Category | ProductCount |
+    | Categoria | ProductCount |
     | -- | -- |
     | Bib Shorts | 3 |
     | Bike Racks | 1 |
@@ -243,8 +243,8 @@ Anche se SQL è un linguaggio comune per l'esecuzione di query su set di dati st
 
     | _c0_ | _c1_ | _c2_ | _c3_ |
     | -- | -- | -- | -- |
-    | ProductID | ProductName | Category | ListPrice |
-    | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399,9900 |
+    | ProductID | ProductName | Categoria | ListPrice |
+    | 771 | Mountain-100 argento, 38 | Mountain Bikes | 3399,9900 |
     | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399,9900 |
     | ... | ... | ... | ... |
 
@@ -261,9 +261,9 @@ Anche se SQL è un linguaggio comune per l'esecuzione di query su set di dati st
 
 10. Eseguire nuovamente la cella e verificare che i risultati siano simili ai seguenti:
 
-    | ProductID | ProductName | Category | ListPrice |
+    | ProductID | ProductName | Categoria | ListPrice |
     | -- | -- | -- | -- |
-    | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399,9900 |
+    | 771 | Mountain-100 argento, 38 | Mountain Bikes | 3399,9900 |
     | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399,9900 |
     | ... | ... | ... | ... |
 
@@ -279,10 +279,10 @@ Anche se SQL è un linguaggio comune per l'esecuzione di query su set di dati st
 
 13. Selezionare **&#9655; Esegui** a sinistra per eseguire la nuova cella di codice ed esaminare i risultati, che dovrebbero essere simili ai seguenti:
 
-    | Category | count |
+    | Category | numero. |
     | -- | -- |
     | Headsets | 3 |
-    | Wheels | 14 |
+    | Ruote | 14 |
     | ... | ... |
 
 14. Nell'output dei risultati della cella selezionare la visualizzazione **Grafico**. Il grafico risultante dovrebbe essere simile al seguente:

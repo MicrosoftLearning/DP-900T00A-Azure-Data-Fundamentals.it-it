@@ -1,9 +1,9 @@
 ---
 lab:
-  title: Esplora Azure Cosmos DB
+  title: Esplorare Azure Cosmos DB
   module: Explore fundamentals of Azure Cosmos DB
 ---
-# Esplora Azure Cosmos DB
+# Esplorare Azure Cosmos DB
 
 In questo esercizio si effettuerà il provisioning di un database di Azure Cosmos DB nella sottoscrizione di Azure e si esploreranno i diversi modi in cui è possibile usarlo per archiviare i dati non relazionali.
 
@@ -19,9 +19,9 @@ Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosm
 
 1. Nel portale di Azure selezionare **Crea una risorsa** in alto a sinistra e cercare *Azure Cosmos DB*.  Nei risultati selezionare **Azure Cosmos DB** e quindi **Crea**.
 1. Nel riquadro **Azure Cosmos DB for NoSQL** selezionare **Crea**.
-1. Immettere i dettagli seguenti e quindi selezionare **Rivedi e crea**: 
+1. Immettere i dettagli seguenti e quindi selezionare **Rivedi e crea**:
     - **Sottoscrizione**: se si sta usando una sandbox, selezionare *Concierge Subscription* (Sottoscrizione Concierge). In caso contrario, selezionare la sottoscrizione di Azure personale.
-    - **Gruppo di risorse**: se si sta usando una sandbox, selezionare il gruppo di risorse esistente (che avrà un nome simile a *learn-xxxx...* ). In caso contrario, creare un nuovo gruppo di risorse con il nome desiderato.
+    - **Gruppo di risorse**: se si sta usando una sandbox, selezionare il gruppo di risorse esistente (che avrà un nome simile a *learn-xxxx...*). In caso contrario, creare un nuovo gruppo di risorse con il nome desiderato.
     - **Nome account**: immettere un nome univoco
     - **Località**: scegliere una località consigliata
     - **Modalità di capacità**: velocità effettiva con provisioning
@@ -41,7 +41,7 @@ Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosm
 
 ## Visualizzare e creare elementi
 
-1. Nella pagina Esplora dati espandere il database **SampleDB** e il contenitore **SampleContainer** e selezionare **Elementi** per visualizzare l'elenco degli elementi disponibili nel contenitore. Gli elementi rappresentano i dati del prodotto, ognuno con un ID univoco e altre proprietà.
+1. Nella pagina Esplora dati espandere il database **SampleDB** e il contenitore **SampleContainer** e selezionare **Elementi** per visualizzare l'elenco degli elementi disponibili nel contenitore. Gli elementi rappresentano dati di prodotto, ognuno con un ID univoco e altre proprietà.
 1. Selezionare uno degli elementi nell'elenco per visualizzare una rappresentazione JSON dei rispettivi dati.
 1. Nella parte superiore della pagina selezionare **Nuovo elemento** per creare un nuovo elemento vuoto.
 1. Modificare il file JSON relativo al nuovo elemento come indicato di seguito e quindi selezionare **Salva**.
@@ -72,7 +72,7 @@ Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosm
     WHERE CONTAINS(c.name,"Helmet")
     ```
 
-1. Usare il pulsante **Esegui query** per eseguire la query modificata ed esaminare i risultati, inclusi le entità JSON per tutti gli elementi con un campo **nome** contenente il testo "Helmet".
+1. Usare il pulsante **Esegui query** per eseguire la query aggiornata ed esaminare i risultati, che includono le entità JSON per tutti gli elementi con un campo **name** contenente il testo "Helmet".
 1. Chiudere l'editor di query SQL ignorando le modifiche.
 
     È stata illustrata la procedura per creare ed eseguire query su entità JSON in un database Cosmos DB usando l'interfaccia Esplora dati nel portale di Azure. In uno scenario reale, uno sviluppatore di applicazioni userebbe uno dei molti SDK (Software Development Kit) specifici dei linguaggi di programmazione per chiamare l'API NoSQL ed eseguire operazioni sui dati nel database.

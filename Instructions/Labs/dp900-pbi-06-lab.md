@@ -21,9 +21,9 @@ Se Microsoft Power BI Desktop non è già installato nel computer Windows, è po
 1. Scaricare il programma di installazione di Power BI Desktop da [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
 1. Quando il file è stato scaricato, aprirlo e usare la procedura guidata di installazione per installare Power BI Desktop nel computer. Questa installazione può richiedere alcuni minuti.
 
-## Importa dati
+## Importare dati
 
-1. Aprire Power BI Desktop. L'interfaccia dell'applicazione ha un aspetto simile al seguente:
+1. Apri Power BI Desktop. L'interfaccia dell'applicazione ha un aspetto simile al seguente:
 
     ![Screenshot che mostra la schermata iniziale di Power BI Desktop.](images/power-bi-start.png)
 
@@ -67,7 +67,7 @@ Se Microsoft Power BI Desktop non è già installato nel computer Windows, è po
 
 Le tre tabelle di dati importate sono state caricate in un modello di dati, che verrà ora esaminato e affinato.
 
-1. In Power BI Desktop, nel bordo sinistro, selezionare la scheda **Modello** e quindi disporre le tabelle nel modello in modo che siano visibili. È possibile nascondere i riquadri a destra usando le icone **>>** :
+1. In Power BI Desktop, nel bordo sinistro, selezionare la scheda **Modello** e quindi disporre le tabelle nel modello in modo che siano visibili. È possibile nascondere i riquadri a destra usando le icone **>>**:
 
     ![Screenshot che mostra la scheda Modello in Power BI.](images/model-tab.png)
 
@@ -77,23 +77,23 @@ Le tre tabelle di dati importate sono state caricate in un modello di dati, che 
 
     Questo passaggio garantisce che i valori dei ricavi vengano visualizzati come valuta nelle visualizzazioni del report.
 
-1. Nella tabella dei prodotti fare clic con il pulsante destro del mouse sul campo **Category** (o aprire il relativo menu **&vellip;** ) e selezionare **Crea gerarchia**. Questo passaggio crea una gerarchia denominata **Gerarchia di Category**. Per visualizzarla, potrebbe essere necessario espandere o scorrere la tabella **products**. È possibile visualizzarla anche nel riquadro **Campi**:
+1. Nella tabella dei prodotti fare clic con il pulsante destro del mouse sul campo **Category** (o aprire il relativo menu **&vellip;**) e selezionare **Crea gerarchia**. Questo passaggio crea una gerarchia denominata **Gerarchia di Category**. Per visualizzarla, potrebbe essere necessario espandere o scorrere la tabella **products**. È possibile visualizzarla anche nel riquadro **Campi**:
 
     ![Screenshot che mostra come aggiungere la gerarchia di categorie in Power BI.](images/category-hierarchy.png)
 
-1. Nella tabella dei prodotti fare clic con il pulsante destro del mouse sul campo **ProductName** (o aprire il relativo menu **&vellip;** ) e scegliere **Aggiungi alla gerarchia** > **Gerarchia di Category**. In questo modo, il campo **NomeProdotto** viene aggiunto alla gerarchia creata in precedenza.
+1. Nella tabella dei prodotti fare clic con il pulsante destro del mouse sul campo **ProductName** (o aprire il relativo menu **&vellip;**) e scegliere **Aggiungi alla gerarchia** > **Gerarchia di Category**. In questo modo, il campo **NomeProdotto** viene aggiunto alla gerarchia creata in precedenza.
 1. Nel riquadro **Campi** fare clic con il pulsante destro del mouse su **Gerarchia di categorie** (o aprire il relativo menu **...** ) e selezionare **Rinomina**. Rinominare quindi la gerarchia in **Prodotto classificato**.
 
     ![Screenshot che mostra come rinominare la gerarchia in Power BI.](images/rename-hierarchy.png)
 
-1. Nel bordo sinistro selezionare la scheda **Visualizzazione dati** e quindi nel riquadro **Dati** selezionare la tabella **clienti** .
+1. Nel bordo a sinistra selezionare la scheda **Vista dati** e quindi nel riquadro **Dati** selezionare la tabella **clienti**.
 1. Selezionare l'intestazione di colonna **Città** e quindi impostare la proprietà **Categoria di dati** su **Città**:
 
     ![Screenshot che mostra come impostare una categoria di dati in Power BI.](images/data-category.png)
 
     Questo passaggio garantirà che i valori di questa colonna vengano interpretati come nomi di città, utili se si intende includere visualizzazioni di mappa.
 
-## Creare un report
+## Creazione di un report
 
 A questo punto, è possibile creare un report. È innanzitutto necessario controllare alcune impostazioni per assicurarsi che tutte le visualizzazioni siano abilitate.
 
@@ -103,7 +103,7 @@ A questo punto, è possibile creare un report. È innanzitutto necessario contro
 
     Questa impostazione garantisce che sia possibile includere visualizzazioni mappa nei report.
 
-1. Nel bordo sinistro selezionare la scheda **Visualizzazione report** e visualizzare l'interfaccia di progettazione del report.
+1. Nel bordo a sinistra selezionare la scheda **Vista report** e visualizzare l'interfaccia di progettazione del report.
 
     ![Screenshot che mostra la scheda Report in Power BI.](images/report-tab.png)
 
@@ -111,7 +111,7 @@ A questo punto, è possibile creare un report. È innanzitutto necessario contro
 
     ![Screenshot che mostra come aggiungere una casella di testo in Power BI.](images/text-box.png)
 
-1. Selezionare qualsiasi area vuota nel report per deselezionare la casella di testo. Nel riquadro **Dati** espandere **Prodotti** e selezionare il campo **Prodotti classificati** . Questo passaggio aggiunge una tabella al report.
+1. Selezionare qualsiasi area vuota nel report per deselezionare la casella di testo. Nel riquadro **Dati** espandere **Prodotti** e selezionare il campo **Prodotti classificati**. Questo passaggio aggiunge una tabella al report.
 
     ![Screenshot che mostra come aggiungere una tabella di prodotti classificati a un report in Power BI.](images/categorized-products-table.png)
 
@@ -129,13 +129,13 @@ A questo punto, è possibile creare un report. È innanzitutto necessario contro
 
     ![Screenshot che mostra un istogramma con drill-down per visualizzare i prodotti all'interno di una categoria.](images/drill-down.png)
 
-1. Usare l'icona **&#x2191;** per eseguire il drill-up fino al livello di categoria. Selezionare quindi l'icona **(** &#8595; **)** per disattivare la funzionalità di drill-down.
-1. Selezionare un'area vuota del report e quindi nel riquadro **Dati** selezionare il campo **Quantity** nella tabella **ordini** e il campo **Categoria** nella tabella **prodotti** . Questo passaggio consente di ottenere un altro grafico a colonne che mostra la quantità di vendite in base alla categoria di prodotti.
+1. Usare l'icona **&#x2191;** per eseguire il drill-up fino al livello di categoria. Selezionare quindi l'icona **(**&#8595;**)** per disattivare la funzionalità di drill-down.
+1. Selezionare un'area vuota del report e quindi nel riquadro **Dati** selezionare il campo **Quantità** nella tabella **ordini** e il campo **Categoria** nella tabella **prodotti**. Questo passaggio consente di ottenere un altro grafico a colonne che mostra la quantità di vendite in base alla categoria di prodotti.
 1. Con il nuovo grafico a colonne selezionato, nel riquadro **Visualizzazioni** selezionare **Grafico a torta** e quindi ridimensionare il grafico e posizionarlo accanto al grafico ricavi per colonna categoria.
 
     ![Screenshot che mostra un grafico a torta che mostra la quantità di vendite per categoria.](images/category-pie-chart.png)
 
-1. Selezionare un'area vuota del report e quindi nel riquadro **Dati** selezionare il campo **Città** nella tabella **clienti** e quindi selezionare il campo **Ricavi** nella tabella **ordini** . Il risultato è una mappa che mostra i ricavi di vendita per città. Ridisporre e ridimensionare le visualizzazioni come necessario:
+1. Selezionare un'area vuota del rapporto e quindi nel riquadro **Dati** selezionare il campo **Città** nella tabella **clienti** e il campo **Ricavi** nella tabella **ordini**. Il risultato è una mappa che mostra i ricavi di vendita per città. Ridisporre e ridimensionare le visualizzazioni come necessario:
 
     ![Screenshot che mostra una mappa che mostra i ricavi per città.](images/revenue-map.png)
 

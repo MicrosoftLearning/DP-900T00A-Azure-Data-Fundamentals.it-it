@@ -6,7 +6,7 @@ lab:
 
 # Esplorare Esplora dati di Azure Synapse
 
-> **Nota**: a causa delle modifiche apportate al prodotto, esistono alcuni problemi noti con la sezione **Creare un database e inserire i dati** di questo lab. Stiamo lavorando per risolvere questi problemi.
+> **Nota**: a causa delle modifiche apportate al prodotto, esistono alcuni problemi noti relativi alla sezione **Creare un database e inserire i dati** di questo lab. Stiamo lavorando per risolvere questi problemi.
 
 In questo esercizio si userà Esplora dati di Azure Synapse per analizzare i dati delle serie temporali.
 
@@ -18,30 +18,30 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 ## Effettuare il provisioning di un'area di lavoro di Synapse Analytics
 
-> **Suggerimento**: se è già disponibile un'area di lavoro Azure Synapse da un esercizio precedente, ignorare questa sezione e passare direttamente alla sezione **[Creare un pool di Esplora dati](#create-a-data-explorer-pool)** .
+> **Suggerimento**: se è già disponibile un'area di lavoro Azure Synapse da un esercizio precedente, ignorare questa sezione e passare direttamente alla sezione **[Creare un pool di Esplora dati](#create-a-data-explorer-pool)**.
 
 1. Aprire il portale di Azure all'indirizzo [https://portal.azure/com](https://portal.azure.com?azure-portal=true) ed eseguire l'accesso usando le credenziali associate alla sottoscrizione di Azure.
 
-    >                 **Nota**: assicurarsi di essere nella directory relativa alla sottoscrizione personale, indicata in alto a destra sotto l'ID utente. In caso contrario, selezionare l'icona utente e passare alla directory appropriata.
+    > **Nota**: assicurarsi di essere nella directory relativa alla sottoscrizione personale, indicata in alto a destra sotto l'ID utente. In caso contrario, selezionare l'icona utente e passare alla directory appropriata.
 
 1. Nella **home page** del portale di Azure usare l'icona **&#65291; Crea una risorsa** per creare una nuova risorsa.
 1. Cercare *Azure Synapse Analytics* e creare una nuova risorsa **Azure Synapse Analytics** con le impostazioni seguenti:
-    - **Sottoscrizione**: *la propria sottoscrizione di Azure*
+    - **Sottoscrizione**: *la sottoscrizione di Azure in uso*.
         - **Gruppo di risorse**: *creare un nuovo gruppo di risorse con un nome appropriato, ad esempio "synapse-rg"*
         - **Gruppo di risorse gestite**: *immettere un nome appropriato, ad esempio "synapse-managed-rg".*
-    - **Nome dell'area di lavoro**: *immettere un nome univoco dell'area di lavoro, ad esempio "synapse-ws-<nome_utente>* .
+    - **Nome dell'area di lavoro**: *immettere un nome univoco dell'area di lavoro, ad esempio "synapse-ws-<nome_utente>*.
     - **Area**: *selezionare qualsiasi area disponibile*.
-    - **Selezionare Data Lake Storage Gen 2**: dalla sottoscrizione 
-        - **Nome dell'account**: *creare un nuovo account con un nome univoco, ad esempio "datalake<nome_utente>"* .
-        - **Nome file system**: *creare un nuovo file system con un nome univoco, ad esempio "fs<nome_utente>"* .
+    - **Selezionare Data Lake Storage Gen 2**: dalla sottoscrizione
+        - **Nome dell'account**: *creare un nuovo account con un nome univoco, ad esempio "datalake<nome_utente>"*.
+        - **Nome file system**: *creare un nuovo file system con un nome univoco, ad esempio "fs<nome_utente>"*.
 
-    >                 **Nota**: per un'area di lavoro di Synapse Analytics sono necessari due gruppi di risorse nella sottoscrizione di Azure, uno per le risorse create in modo esplicito e un altro per le risorse gestite usate dal servizio. È inoltre necessario un account di archiviazione Data Lake in cui archiviare dati, script e altri artefatti.
+    > **Nota**: per un'area di lavoro di Synapse Analytics sono necessari due gruppi di risorse nella sottoscrizione di Azure, uno per le risorse create in modo esplicito e un altro per le risorse gestite usate dal servizio. È inoltre necessario un account di archiviazione Data Lake in cui archiviare dati, script e altri artefatti.
 
 1. Dopo aver immesso questi dettagli, selezionare **Rivedi e crea**, quindi selezionare **Crea** per creare l'area di lavoro.
 1. Attendere che venga creata l'area di lavoro. L'operazione può richiedere circa cinque minuti.
 1. Al termine della distribuzione, passare al gruppo di risorse creato e osservare che contiene l'area di lavoro di Synapse Analytics e un account di archiviazione Data Lake.
 1. Selezionare l'area di lavoro di Synapse e nella relativa pagina **Panoramica**, nella scheda **Apri Synapse Studio**, selezionare **Apri** per aprire Synapse Studio in una nuova scheda del browser. Synapse Studio è un'interfaccia basata sul Web in cui è possibile usare l'area di lavoro di Synapse Analytics.
-1. Sul lato sinistro di Synapse Studio usare l'icona **&rsaquo;&rsaquo;** per espandere il menu. In questo modo vengono visualizzate le diverse pagine all'interno di Synapse Studio che verranno usate per gestire le risorse ed eseguire attività di analisi dei dati.
+1. Sul lato a sinistra di Synapse Studio usare l'icona **&rsaquo;&rsaquo;** per espandere il menu. Verranno visualizzate le varie pagine all'interno di Synapse Studio in cui è possibile gestire le risorse ed eseguire attività di analisi dei dati.
 
 ## Creare un pool di Esplora dati
 
@@ -84,7 +84,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 1. Sulla barra degli strumenti selezionare **&#9655; Esegui** per eseguire la query ed esaminare i risultati, che dovrebbero essere simili ai seguenti:
 
-    | Ora | Dispositivo | Valore |
+    | Time | Dispositivo | valore |
     | --- | --- | --- |
     | 2022-01-01T00:00:00Z | Dev1 | 7 |
     | 2022-01-01T00:00:01Z | Dev2 | 4 |
@@ -92,7 +92,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
     Se i risultati corrispondono a questo, la tabella **devices** è stata creata correttamente dai dati presenti nel file.
 
-    >                 **Suggerimento**: in questo esempio è stata importata una quantità molto ridotta di dati batch da un file e questa operazione è appropriata ai fini di questo esercizio. In realtà, è possibile usare Esplora dati per analizzare volumi di dati di dimensioni maggiori e, poiché è stato abilitato l'inserimento di flussi, è anche possibile configurare Esplora dati in modo da inserire dati nella tabella da un'origine di streaming, ad esempio Hub eventi di Azure.
+    > **Suggerimento**: in questo esempio è stata importata una quantità molto ridotta di dati batch da un file e questa operazione è appropriata ai fini di questo esercizio. In realtà, è possibile usare Esplora dati per analizzare volumi di dati di dimensioni maggiori e, poiché è stato abilitato l'inserimento di flussi, è anche possibile configurare Esplora dati in modo da inserire dati nella tabella da un'origine di streaming, ad esempio Hub eventi di Azure.
 
 ## Usare il linguaggio di query Kusto per eseguire query sulla tabella in Synapse Studio
 
@@ -141,7 +141,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 ## Eliminare le risorse di Azure
 
-Dopo aver completato l'esplorazione di Azure Synapse Analytics, è necessario eliminare le risorse create per evitare l'addebito di costi di Azure non necessari.
+Dopo aver completato l'esplorazione di Azure Synapse Analytics, è necessario eliminare le risorse create per evitare costi di Azure non necessari.
 
 1. Chiudere la scheda del browser relativa a Synapse Studio senza salvare le modifiche e tornare al portale di Azure.
 1. Nella **home page** del portale di Azure selezionare **Gruppi di risorse**.
