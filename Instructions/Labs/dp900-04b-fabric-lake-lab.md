@@ -84,9 +84,9 @@ Un modo semplice per inserire dati consiste nell'usare un'attività **Copia dati
 
 Ora che i dati sono stati inseriti in una tabella nel lakehouse, è possibile usare SQL per eseguire le query.
 
-1. Nella parte superiore destra della pagina Lakehouse passare all'**endpoint SQL** del lakehouse.
+1. Nella parte superiore destra della pagina Lakehouse passare all'endpoint **** di analisi SQL per il lakehouse.
 
-    ![Screenshot del menu endpoint SQL.](./images/endpoint-switcher.png)
+    ![Screenshot del menu endpoint di analisi SQL.](./images/endpoint-switcher.png)
 
 1. Selezionare **Nuova query SQL** sulla barra degli strumenti. Nel riquadro dell'editor di query, immettere il seguente codice SQL:
 
@@ -102,7 +102,7 @@ Ora che i dati sono stati inseriti in una tabella nel lakehouse, è possibile us
 
 ## Visualizzare i dati in un lakehouse
 
-I lakehouse di Microsoft Fabric organizzano tutte le tabelle in un modello di dati, che è possibile usare per creare visualizzazioni e report.
+I lakehouse di Microsoft Fabric organizzano tutte le tabelle in un modello di dati semantico, che è possibile usare per creare visualizzazioni e report.
 
 1. Nella parte inferiore sinistra della pagina, nel riquadro **Esplora risorse** selezionare la scheda **Modello** per visualizzare il modello di dati per le tabelle nel lakehouse (in questo caso è presente una sola tabella).
 
