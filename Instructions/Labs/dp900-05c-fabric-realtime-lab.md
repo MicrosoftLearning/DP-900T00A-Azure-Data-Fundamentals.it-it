@@ -27,36 +27,23 @@ Prima di usare i dati in Fabric, creare un'area di lavoro con la versione di val
 
 Ora che si dispone di un'area di lavoro, è possibile creare un database KQL per archiviare i dati in tempo reale.
 
-1. Nella parte inferiore a sinistra del portale passare all'esperienza di **Analisi in tempo reale**.
+1. Nella parte inferiore sinistra del portale passare all'esperienza **di intelligence** in tempo reale.
 
     ![Screenshot del menu del selettore dell'esperienza.](./images/fabric-real-time.png)
 
-    La home page dell'analisi in tempo reale include riquadri per creare asset di uso comune per l'analisi dei dati in tempo reale
+    La home page di Intelligence in tempo reale include riquadri per creare asset di uso comune per l'analisi dei dati in tempo reale.
 
-2. Nella home page dell'analisi in tempo reale creare un nuovo **database KQL** con un nome a piacere.
+2. Nella home page di Intelligence in tempo reale creare una nuova **eventhouse** con un nome di propria scelta.
 
     ![Screenshot dell'editor RTA con Crea database KQL evidenziato.](./images/create-kql-db.png)
 
-   Verrà visualizzata una schermata del dashboard e quindi si seleziona il pulsante Database KQL nella parte superiore.
-
-    ![Screenshot di un nuovo database KQL.](./images/kql-database.png)
-
-    Dopo aver selezionato, verrà visualizzata una ***finestra di dialogo Nuovo database*** KQL in cui verrà assegnato un nome al database KQL.
-
-    ![Screenshot di una nuova finestra di dialogo nome database KQL.](./images/name-kql-db.png)
-
-   - denominare il database, in questo scenario, è: `my_kql_db`
-   - fare clic su ***Crea***
-  
-    Dopo alcuni minuti, verrà creato un nuovo database KQL:
-
-    Attualmente non sono presenti tabelle nel database.
+    La Eventhouse viene usata per raggruppare e gestire i database tra progetti. Un database KQL vuoto viene creato automaticamente con il nome della casa eventi e verranno aggiunti i dati più avanti in questo esercizio.
 
 ## Creare un eventstream
 
 Gli eventstream offrono un modo scalabile e flessibile per inserire dati in tempo reale da un'origine di streaming.
 
-1. Nella barra del menu a sinistra selezionare la **home page** dell'esperienza di analisi in tempo reale.
+1. Nella barra dei menu a sinistra selezionare la **home** page per l'esperienza di intelligence in tempo reale.
 1. Nella home page selezionare il riquadro per creare un nuovo **eventstream** con un nome a piacere.
 
     Dopo poco, viene visualizzata la finestra di progettazione visiva per eventstream.
@@ -70,11 +57,7 @@ Gli eventstream offrono un modo scalabile e flessibile per inserire dati in temp
 
     ![Screenshot dell'anteprima dati dell'eventstream.](./images/eventstream-preview.png)
 
-1. Nel canvas della finestra di progettazione selezionare **Database KQL** nell'elenco **Nuova destinazione** della destinazione. Nel riquadro del **database KQL** specificare quindi il nome di destinazione **taxi-data** e selezionare l'area di lavoro e il database KQL. Quindi, selezionare **Crea e configura**.
-1. Nella pagina **Destinazione** della procedura guidata **Inserimento dati** selezionare **Nuova tabella** e immettere come nome **taxi-data**. Quindi, selezionare **Avanti: origine**.
-1. Nella pagina **Origine** esaminare il nome di connessione dati predefinito e quindi selezionare **Avanti: schema**.
-1. Nella pagina **Schema** modificare il **formato dati** da TXT a **JSON** e visualizzare l'anteprima per verificare che questo formato restituisca più colonne di dati. Quindi, selezionare **Avanti: riepilogo**.
-1. Nella pagina **Riepilogo** attendere che venga stabilito l'inserimento continuo e quindi selezionare **Chiudi**.
+1. Nel canvas della finestra di progettazione selezionare **Database KQL** nell'elenco **Nuova destinazione** della destinazione. Nel riquadro del **database KQL** specificare quindi il nome di destinazione **taxi-data** e selezionare l'area di lavoro e il database KQL. Selezionare **Crea nuovo** in Tabella di destinazione e immettere il nome **della tabella taxi-data**. Selezionare **Aggiungi**.
 1. Verificare che l'eventstream completato sia simile al seguente:
 
     ![Screenshot di un eventstream completato.](./images/complete-eventstream.png)
