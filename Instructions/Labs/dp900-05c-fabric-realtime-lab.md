@@ -27,23 +27,23 @@ Prima di usare i dati in Fabric, creare un'area di lavoro con la versione di val
 
 Ora che si dispone di un'area di lavoro, è possibile creare un database KQL per archiviare i dati in tempo reale.
 
-1. Nella parte inferiore sinistra del portale passare all'esperienza **di intelligence** in tempo reale.
+1. Nella parte inferiore sinistra del portale, passare all'esperienza di **Intelligence in tempo reale**.
 
     ![Screenshot del menu del selettore dell'esperienza.](./images/fabric-real-time.png)
 
     La home page di Intelligence in tempo reale include riquadri per creare asset di uso comune per l'analisi dei dati in tempo reale.
 
-2. Nella home page di Intelligence in tempo reale creare una nuova **eventhouse** con un nome di propria scelta.
+2. Nella home page di Intelligence in tempo reale, creare una nuova **eventhouse** con un nome di propria scelta.
 
-    ![Screenshot dell'editor RTA con Crea database KQL evidenziato.](./images/create-kql-db.png)
+    ![Screenshot dell’editor RTA con Crea KQL DB evidenziato.](./images/create-kql-db.png)
 
-    La Eventhouse viene usata per raggruppare e gestire i database tra progetti. Un database KQL vuoto viene creato automaticamente con il nome della casa eventi e verranno aggiunti i dati più avanti in questo esercizio.
+    L’eventhouse viene usata per raggruppare e gestire i database tra i vari progetti. Un database KQL vuoto viene creato automaticamente con il nome dell’eventhouse e i dati verranno aggiunti più avanti nel corso di questo esercizio.
 
 ## Creare un eventstream
 
 Gli eventstream offrono un modo scalabile e flessibile per inserire dati in tempo reale da un'origine di streaming.
 
-1. Nella barra dei menu a sinistra selezionare la **home** page per l'esperienza di intelligence in tempo reale.
+1. Nella barra dei menu a sinistra, selezionare la pagina **Home** per l'esperienza di Intelligence in tempo reale.
 1. Nella home page selezionare il riquadro per creare un nuovo **eventstream** con un nome a piacere.
 
     Dopo poco, viene visualizzata la finestra di progettazione visiva per eventstream.
@@ -57,7 +57,7 @@ Gli eventstream offrono un modo scalabile e flessibile per inserire dati in temp
 
     ![Screenshot dell'anteprima dati dell'eventstream.](./images/eventstream-preview.png)
 
-1. Nel canvas della finestra di progettazione selezionare **Database KQL** nell'elenco **Nuova destinazione** della destinazione. Nel riquadro del **database KQL** specificare quindi il nome di destinazione **taxi-data** e selezionare l'area di lavoro e il database KQL. Selezionare **Crea nuovo** in Tabella di destinazione e immettere il nome **della tabella taxi-data**. Selezionare **Aggiungi**.
+1. Nel canvas della finestra di progettazione selezionare **Database KQL** nell'elenco **Nuova destinazione** della destinazione. Nel riquadro del **database KQL** specificare quindi il nome di destinazione **taxi-data** e selezionare l'area di lavoro e il database KQL. Selezionare **Crea nuovo** in Tabella di destinazione e immettere il nome della tabella **taxi-data**. Selezionare **Aggiungi**.
 1. Verificare che l'eventstream completato sia simile al seguente:
 
     ![Screenshot di un eventstream completato.](./images/complete-eventstream.png)

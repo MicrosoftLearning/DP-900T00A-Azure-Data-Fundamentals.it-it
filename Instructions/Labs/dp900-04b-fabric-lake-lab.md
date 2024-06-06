@@ -84,7 +84,7 @@ Un modo semplice per inserire dati consiste nell'usare un'attività **Copia dati
 
 Ora che i dati sono stati inseriti in una tabella nel lakehouse, è possibile usare SQL per eseguire le query.
 
-1. Nella parte superiore destra della pagina Lakehouse passare all'endpoint **** di analisi SQL per il lakehouse.
+1. Nella parte superiore destra della pagina Lakehouse passare all'**endpoint di analisi SQL** per il lakehouse.
 
     ![Screenshot del menu endpoint di analisi SQL.](./images/endpoint-switcher.png)
 
