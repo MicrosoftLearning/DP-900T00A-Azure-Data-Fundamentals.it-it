@@ -37,7 +37,7 @@ In questo esercizio si effettuerà il provisioning di una risorsa di Database di
     - **Nome utente amministratore**: il proprio nome
     - **Password** e **Conferma password**: una password adeguatamente complessa
 
-1. Al termine, selezionare **Avanti: Rete**.
+1. Selezionare **Avanti: Rete**.
 
 1. In **Regole del firewall** selezionare **&#65291; Aggiungere l'indirizzo IP client corrente**.
 

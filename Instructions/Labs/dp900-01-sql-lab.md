@@ -4,17 +4,17 @@ lab:
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-sql-database"></a>Esplorare il database SQL di Azure
+# Esplorare il database SQL di Azure
 
 In questo esercizio si effettuerà il provisioning di una risorsa del database SQL di Azure nella sottoscrizione di Azure e si userà quindi SQL per eseguire una query delle tabelle nel database relazionale.
 
 Il completamento di questo lab richiederà circa **15** minuti.
 
-## <a name="before-you-start"></a>Prima di iniziare
+## Prima di iniziare
 
 Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free) con accesso di livello amministrativo.
 
-## <a name="provision-an-azure-sql-database-resource"></a>Effettuare il provisioning di una risorsa del database SQL di Azure
+## Effettuare il provisioning di una risorsa del database SQL di Azure
 
 1. Nel [portale di Azure](https://portal.azure.com?azure-portal=true) selezionare **&#65291; Crea una risorsa** nell'angolo in alto a sinistra e cercare *Azure SQL*. Nella pagina **Azure SQL** risultante selezionare **Crea**.
 
@@ -23,10 +23,10 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
     ![Screenshot del portale di Azure che mostra la pagina Azure SQL.](images//azure-sql-portal.png)
 
 1. Immettere i valori seguenti nella pagina **Crea database SQL** e lasciare tutte le altre proprietà con l'impostazione predefinita:
-    - **Sottoscrizione** Selezionare la sottoscrizione di Azure.
+    - **Sottoscrizione**: selezionare una sottoscrizione di Azure.
     - **Gruppo di risorse**: creare un nuovo gruppo di risorse con un nome di propria scelta.
     - **Nome database**: *AdventureWorks*
-    -                 **Server**: selezionare **Crea nuovo** e creare un nuovo server con un nome univoco in qualsiasi posizione disponibile. Usare **Autenticazione SQL** e specificare il proprio nome come account di accesso amministratore server e una password adeguatamente complessa (da ricordare perché sarà necessaria più avanti).
+    - **Server**: selezionare **Crea nuovo** e creare un nuovo server con un nome univoco in qualsiasi posizione disponibile. Usare **Autenticazione SQL** e specificare il proprio nome come account di accesso amministratore server e una password adeguatamente complessa (da ricordare perché sarà necessaria più avanti).
     - **Usare il pool elastico SQL?**: *No*
     - **Ambiente del carico di lavoro**: Sviluppo
     - **Calcolo e archiviazione**: lasciare invariati

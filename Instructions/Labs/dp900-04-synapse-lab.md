@@ -279,7 +279,7 @@ Anche se SQL è un linguaggio comune per l'esecuzione di query su set di dati st
 
 13. Selezionare **&#9655; Esegui** a sinistra per eseguire la nuova cella di codice ed esaminare i risultati, che dovrebbero essere simili ai seguenti:
 
-    | Category | numero. |
+    | Categoria | numero |
     | -- | -- |
     | Headsets | 3 |
     | Ruote | 14 |
