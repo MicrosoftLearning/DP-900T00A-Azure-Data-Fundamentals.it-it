@@ -84,7 +84,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 1. Sulla barra degli strumenti selezionare **&#9655; Esegui** per eseguire la query ed esaminare i risultati, che dovrebbero essere simili ai seguenti:
 
-    | Time | Dispositivo | valore |
+    | Time | Dispositivo | Valore |
     | --- | --- | --- |
     | 2022-01-01T00:00:00Z | Dev1 | 7 |
     | 2022-01-01T00:00:01Z | Dev2 | 4 |

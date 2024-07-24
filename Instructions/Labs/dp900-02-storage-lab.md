@@ -104,27 +104,27 @@ Tabelle di Azure fornisce un archivio di coppie chiave/valore per le applicazion
     - **RowKey**: 1
 1. Selezionare **Aggiungi proprietà** e creare una nuova proprietà con i valori seguenti:
 
-    |Nome della proprietà | Tipo | valore |
+    |Nome proprietà | Type | valore |
     | ------------ | ---- | ----- |
     | Nome | string | Widget |
 
 1. Aggiungere una seconda proprietà con i valori seguenti:
 
-    |Nome della proprietà | Tipo | valore |
+    |Nome proprietà | Type | Valore |
     | ------------ | ---- | ----- |
-    | Price | Double | 2,99 |
+    | Price | Double | 2.99 |
 
 1. Selezionare **Inserisci** per inserire una riga per la nuova entità nella tabella.
 1. Nel browser archiviazione verificare che una riga sia stata aggiunta alla tabella **products** e che sia stata creata una colonna **Timestamp** per indicare quando la riga è stata modificata per l'ultima volta.
 1. Aggiungere un'altra entità alla tabella **products** con le proprietà seguenti:
 
-    |Nome della proprietà | Tipo | valore |
+    |Nome proprietà | Type | Valore |
     | ------------ | ---- | ----- |
-    | PartitionKey | Stringa | 1 |
-    | RowKey | Stringa | 2 |
+    | PartitionKey | String | 1 |
+    | RowKey | String | 2 |
     | Nome | string | Kniknak |
     | Price | Double | 1,99 |
-    | Sospeso | Boolean | true |
+    | Sospeso | Booleano | true |
 
 1. Dopo aver inserito la nuova entità, verificare che nella tabella sia visualizzata una riga contenente il prodotto fuori produzione.
 
