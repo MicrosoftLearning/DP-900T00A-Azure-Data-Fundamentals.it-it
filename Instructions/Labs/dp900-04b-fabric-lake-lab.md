@@ -114,7 +114,7 @@ I lakehouse di Microsoft Fabric organizzano tutte le tabelle in un modello di da
 
 1. Scegliere Salva dal **menu **File** per salvare il report come **Report** corse taxi nell'area** di lavoro Infrastruttura.
 
-    È ora possibile chiudere la scheda del browser che contiene il report per tornare al lakehouse. Il report è disponibile nella pagina dell'area di lavoro nel portale di Microsoft Fabric.
+    Il report è disponibile nella pagina dell'area di lavoro nel portale di Microsoft Fabric.
 
 ## Pulire le risorse
 
