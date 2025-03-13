@@ -10,16 +10,12 @@ In questo esercizio si userà Microsoft Power BI Desktop per creare un modello d
 
 Il completamento di questo lab richiederà circa **20** minuti.
 
-## Prima di iniziare
-
-Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free) con accesso di livello amministrativo.
-
-### Installare Power BI Desktop
+## Installare Power BI Desktop
 
 Se Microsoft Power BI Desktop non è già installato nel computer Windows, è possibile scaricarlo e installarlo gratuitamente.
 
 1. Scaricare il programma di installazione di Power BI Desktop da [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
-1. Quando il file è stato scaricato, aprirlo e usare la procedura guidata di installazione per installare Power BI Desktop nel computer. Questa installazione può richiedere alcuni minuti.
+1. Quando il file è stato scaricato, aprirlo e usare la procedura guidata di installazione per installare Power BI Desktop nel computer. Questa installazione potrebbe richiedere alcuni minuti.
 
 ## Importare dati
 
@@ -86,7 +82,7 @@ Le tre tabelle di dati importate sono state caricate in un modello di dati, che 
 
     ![Screenshot che mostra come rinominare la gerarchia in Power BI.](images/rename-hierarchy.png)
 
-1. Nel bordo a sinistra selezionare la scheda **Vista dati** e quindi nel riquadro **Dati** selezionare la tabella **clienti**.
+1. Sul bordo sinistro selezionare la **scheda Visualizzazione** tabella e quindi nel **riquadro Dati** selezionare la **tabella customers** .
 1. Selezionare l'intestazione di colonna **Città** e quindi impostare la proprietà **Categoria di dati** su **Città**:
 
     ![Screenshot che mostra come impostare una categoria di dati in Power BI.](images/data-category.png)

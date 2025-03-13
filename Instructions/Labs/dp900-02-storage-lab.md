@@ -42,7 +42,7 @@ Dopo aver creato un account di archiviazione di Azure, è possibile creare un co
     *Se il file JSON viene visualizzato nel browser, salvare la pagina come **product1.json**.*
 
 1. Nella pagina del portale di Azure del contenitore di archiviazione, sulla sinistra, nella sezione **Archiviazione dati** selezionare **Contenitori**.
-1. Nella pagina **Contenitori** selezionare **&#65291; Contenitore** e aggiungere un nuovo contenitore denominato **data** con un livello di accesso pubblico **Privato (nessun accesso anonimo)**.
+1. **Nella pagina Contenitori** selezionare **&#65291; Contenitore** e aggiungere un nuovo contenitore denominato data con un livello di accesso anonimo privato (nessun accesso anonimo).Container and add a new container named **data** with an anonymous access level of **Private (no anonymous access)**.
 1. Una volta creato il contenitore **data**, verificare che sia elencato nella pagina **Contenitori**.
 1. Nel riquadro a sinistra, nella sezione in alto selezionare **Browser archiviazione**. Questa pagina fornisce un'interfaccia basata su browser che consente di lavorare con i dati nell'account di archiviazione.
 1. Nella pagina del browser archiviazione selezionare **Contenitori BLOB** e verificare che il contenitore **data** sia elencato.
@@ -66,7 +66,7 @@ Dopo aver creato un account di archiviazione di Azure, è possibile creare un co
 
 Il supporto di Azure Data Lake Store Gen2 consente di usare cartelle gerarchiche per organizzare e gestire l'accesso ai BLOB. Consente anche di usare l'archivio BLOB di Azure per ospitare file system distribuiti per piattaforme di analisi dei Big Data comuni.
 
-1. Scaricare il file JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) da `https://aka.ms/product2.json` e salvarlo sullo stesso computer, nella stessa cartella in cui in precedenza è stato scaricato **product1.json**. Lo si caricherà nell'archivio BLOB in un secondo momento.
+1. Scaricare il [file JSON product2.json](https://aka.ms/product2.json?azure-portal=true) da `https://aka.ms/product2.json` e salvarlo nel computer nella stessa cartella in cui è stato scaricato **product1.json** in precedenza. Il file verrà caricato nell'archivio BLOB in un secondo momento.
 1. Nella pagina del portale di Azure dell'account di archiviazione, sulla sinistra scorrere verso il basso fino alla sezione **Impostazioni** e selezionare **Aggiornamento di Data Lake Gen2**.
 1. Nella pagina **Aggiornamento di Data Lake Gen2** espandere e completare ogni passaggio per aggiornare l'account di archiviazione per abilitare lo spazio dei nomi gerarchico e supportare Azure Data Lake Storage Gen 2. Questa operazione potrebbe richiedere tempo.
 1. Al termine dell'aggiornamento, nel riquadro a sinistra, nella sezione in alto selezionare **Browser archiviazione** e tornare alla radice del contenitore BLOB **data**, che contiene ancora la cartella **product_data**.
@@ -85,6 +85,7 @@ File di Azure consente di creare condivisioni file basate sul cloud.
 
 1. Nella pagina del portale di Azure del contenitore di archiviazione, sulla sinistra, nella sezione **Archiviazione dati** selezionare **Condivisioni file**.
 1. Nella pagina Condivisioni file selezionare **&#65291; Condivisione file** e aggiungere una nuova condivisione file denominata **files** usando il livello **Ottimizzato per le transazioni**.
+2. Selezionare **Avanti: Backup >** e disabilitare il backup. Selezionare quindi **Rivedi e crea**.
 1. In **Condivisioni file** aprire la nuova condivisione **files**.
 1. Nella parte superiore della pagina selezionare **Connetti**, quindi nel riquadro **Connetti** si noti che esistono schede per i sistemi operativi comuni (Windows, Linux e macOS) contenenti script che è possibile eseguire per connettersi alla cartella condivisa da un computer client.
 1. Chiudere il riquadro **Connetti** e quindi chiudere la pagina **files** per tornare alla pagina **Condivisioni file** dell'account di archiviazione di Azure.
