@@ -81,7 +81,7 @@ Il flusso di eventi inserisce i dati delle scorte in tempo reale, ma attualmente
 
     > **Suggerimento**: selezionare la destinazione nell'area di disegno e, se non viene visualizzata alcuna anteprima dei dati, selezionare **Aggiorna**.
 
-    In questo esercizio è stato creato un flusso di eventi molto semplice che acquisisce i dati in tempo reale e lo carica in una tabella. In un soltuone reale, in genere si aggiungono trasformazioni per aggregare i dati in finestre temporali, ad esempio per acquisire il prezzo medio di ogni titolo in periodi di cinque minuti.
+    In questo esercizio è stato creato un flusso di eventi molto semplice che acquisisce i dati in tempo reale e lo carica in una tabella. In una soluzione reale si aggiungono in genere trasformazioni per aggregare i dati in finestre temporali, ad esempio per acquisire il prezzo medio di ogni titolo in periodi di cinque minuti.
 
     Si esaminerà ora come eseguire query e analizzare i dati acquisiti.
 
