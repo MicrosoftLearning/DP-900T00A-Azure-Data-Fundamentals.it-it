@@ -18,7 +18,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 In questo esercizio si effettuerà il provisioning di una risorsa di Database di Azure per MySQL.
 
-1. Nel portale di Azure selezionare **&#65291; Crea una risorsa** nell'angolo in alto a sinistra e cercare *Database di Azure per MySQL*. Nella pagina **Database di Azure per MySQL** selezionare **Crea**.
+1. Nella portale di Azure selezionare **&#65291; Creare una risorsa** dall'angolo superiore sinistro e cercare `Azure Database for MySQL`. Nella pagina **Database di Azure per MySQL** selezionare **Crea**.
 
 1. Esaminare le opzioni di Database di Azure per MySQL disponibili. In **Tipo di risorsa** selezionare quindi **Server flessibile** e infine **Crea**.
 
