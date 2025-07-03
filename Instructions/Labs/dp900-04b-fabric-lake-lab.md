@@ -68,7 +68,7 @@ Un modo semplice per inserire dati consiste nell'usare un'attività **Copia dati
 
     ![Screenshot di una pipeline con un'attività Copia dati.](./images/copy-data-pipeline.png)
 
-    Quando l'esecuzione della pipeline viene avviata, è possibile monitorarne lo stato nel riquadro **Output** nella finestra di progettazione della pipeline. Usare l'icona **&#8635;** (*Aggiorna*) per aggiornare lo stato e attendere che abbia esito positivo (che potrebbe richiedere 10 minuti o più).
+    Quando l'esecuzione della pipeline viene avviata, è possibile monitorarne lo stato nel riquadro **Output** nella finestra di progettazione della pipeline. Usare l'icona **&#8635;** (*Aggiorna*) per aggiornare lo stato e attendere il completamento (che potrebbe richiedere più di 10 minuti).
 
 1. Nella barra dei menu dell'hub a sinistra selezionare il lakehouse.
 1. **Nella home** page, nel **riquadro Lakehouse Explorer**, nel **menu ...** per il **nodo Tabelle** selezionare **Aggiorna** e quindi espandere **Tabelle** per verificare che la **tabella taxi_rides** sia stata creata.

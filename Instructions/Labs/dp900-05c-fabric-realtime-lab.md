@@ -48,7 +48,7 @@ A questo momento è possibile trovare e inserire dati in tempo reale da un'origi
 
 Il flusso di eventi inserisce i dati delle scorte in tempo reale, ma attualmente non esegue alcuna operazione. Verrà ora creata una eventhouse in cui è possibile archiviare i dati acquisiti in una tabella.
 
-1. Sulla barra dei menu a sinistra selezionare **Crea**. Nella sezione Inteligence* in tempo reale della ** pagina Nuovo* selezionare **Eventhouse**. Assegnargli un nome univoco di propria scelta.
+1. Sulla barra dei menu a sinistra selezionare **Crea**. Nella sezione Intelligence* in tempo reale della **pagina Nuovo* selezionare **Eventhouse**. Assegnargli un nome univoco di propria scelta.
 
     >**Nota**: se l'opzione **Crea** non è aggiunta alla barra laterale, è necessario selezionare prima i puntini di sospensione (**...**).
 

@@ -16,7 +16,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 ## Effettuare il provisioning di una risorsa del database SQL di Azure
 
-1. Nel [portale di Azure](https://portal.azure.com?azure-portal=true) selezionare **&#65291; Crea una risorsa** nell'angolo in alto a sinistra e cercare *Azure SQL*. Nella pagina **Azure SQL** risultante selezionare **Crea**.
+1. [Nella portale di Azure](https://portal.azure.com?azure-portal=true) selezionare **&#65291; Creare una risorsa** dall'angolo superiore sinistro e cercare `Azure SQL`. Nella pagina **Azure SQL** risultante selezionare **Crea**.
 
 1. Esaminare le opzioni di Azure SQL disponibili e quindi nel riquadro **SQL database** verificare che sia selezionato **Database singolo** e selezionare **Crea**.
 
@@ -25,7 +25,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 1. Immettere i valori seguenti nella pagina **Crea database SQL** e lasciare tutte le altre proprietà con l'impostazione predefinita:
     - **Sottoscrizione**: selezionare una sottoscrizione di Azure.
     - **Gruppo di risorse**: creare un nuovo gruppo di risorse con un nome di propria scelta.
-    - **Nome database**: *AdventureWorks*
+    - **Nome del database**: `AdventureWorks`
     - **Server**: selezionare **Crea nuovo** e creare un nuovo server con un nome univoco in qualsiasi posizione disponibile. Usare **Autenticazione SQL** e specificare il proprio nome come account di accesso amministratore server e una password adeguatamente complessa (da ricordare perché sarà necessaria più avanti).
     - **Usare il pool elastico SQL?**: *No*
     - **Ambiente del carico di lavoro**: Sviluppo
@@ -46,7 +46,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 1. Nel riquadro a sinistra della pagina selezionare **Editor di query (anteprima)** e accedere usando l'account di accesso amministratore e la password specificati per il server.
     
-    *Se viene visualizzato un messaggio di errore che informa che l'indirizzo IP client non è consentito, selezionare il collegamento **IP elenco elementi consentiti…** alla fine del messaggio per consentire l'accesso e provare nuovamente ad accedere (in precedenza è stato aggiunto l'indirizzo IP client del computer alle regole del firewall, ma l'editor di query può connettersi da un indirizzo diverso a seconda della configurazione di rete).*
+    >**Nota**: se viene visualizzato un messaggio di errore che informa che l'indirizzo IP client non è consentito, selezionare il **collegamento Allowlist IP ...** alla fine del messaggio per consentire l'accesso e tentare di accedere di nuovo (in precedenza è stato aggiunto l'indirizzo IP client del computer alle regole del firewall, ma l'editor di query può connettersi da un indirizzo diverso a seconda della configurazione di rete).
     
     L'editor di query ha un aspetto simile al seguente:
     
@@ -57,7 +57,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 1. Nel riquadro **Query 1** immettere il codice SQL seguente:
 
     ```sql
-    SELECT * FROM SalesLT.Product;
+   SELECT * FROM SalesLT.Product;
     ```
 
 1. Selezionare **&#9655; Esegui** sopra la query per eseguirla e visualizzare i risultati, che dovrebbero includere tutte le colonne per tutte le righe nella tabella **SalesLT.Product**, come mostrato qui:
@@ -67,18 +67,18 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 1. Sostituire l'istruzione SELECT con il codice seguente e quindi selezionare **&#9655; Esegui** per eseguire la nuova query ed esaminare i risultati (che includono solo le colonne **ProductID**, **Name**, **ListPrice** e **ProductCategoryID**):
 
     ```sql
-    SELECT ProductID, Name, ListPrice, ProductCategoryID
-    FROM SalesLT.Product;
+   SELECT ProductID, Name, ListPrice, ProductCategoryID
+   FROM SalesLT.Product;
     ```
 
 1. Ora provare la query seguente, che usa un JOIN per ottenere il nome della categoria dalla tabella **SalesLT.ProductCategory**:
 
     ```sql
-    SELECT p.ProductID, p.Name AS ProductName,
-            c.Name AS Category, p.ListPrice
-    FROM SalesLT.Product AS p
-    JOIN [SalesLT].[ProductCategory] AS c
-        ON p.ProductCategoryID = c.ProductCategoryID;
+   SELECT p.ProductID, p.Name AS ProductName,
+           c.Name AS Category, p.ListPrice
+   FROM SalesLT.Product AS p
+   JOIN [SalesLT].[ProductCategory] AS c
+       ON p.ProductCategoryID = c.ProductCategoryID;
     ```
 
 1. Chiudere il riquadro dell'editor di query, rimuovendo le modifiche.

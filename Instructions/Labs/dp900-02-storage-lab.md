@@ -19,7 +19,7 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 Il primo passaggio per usare Archiviazione di Azure prevede il provisioning di un account di archiviazione di Azure nella sottoscrizione di Azure.
 
 1. Accedere al [portale di Azure](https://portal.azure.com?azure-portal=true) se questa operazione non è già stata eseguita.
-1. Nella home page del portale di Azure selezionare **&#65291; Crea una risorsa** nell'angolo in alto a sinistra e cercare *Account di archiviazione*. Nella pagina **Account di archiviazione** risultante selezionare **Crea**.
+1. Nella home page portale di Azure selezionare **&#65291; Creare una risorsa** dall'angolo superiore sinistro e cercare `Storage account`. Nella pagina **Account di archiviazione** risultante selezionare **Crea**.
 1. Immettere i valori seguenti nella pagina **Crea un account di archiviazione**:
     - **Sottoscrizione**: selezionare una sottoscrizione di Azure.
     - **Gruppo di risorse**: creare un nuovo gruppo di risorse con un nome di propria scelta.
@@ -42,19 +42,19 @@ Dopo aver creato un account di archiviazione di Azure, è possibile creare un co
     *Se il file JSON viene visualizzato nel browser, salvare la pagina come **product1.json**.*
 
 1. Nella pagina del portale di Azure del contenitore di archiviazione, sulla sinistra, nella sezione **Archiviazione dati** selezionare **Contenitori**.
-1. **Nella pagina Contenitori** selezionare **&#65291; Contenitore** e aggiungere un nuovo contenitore denominato data con un livello di accesso anonimo privato (nessun accesso anonimo).Container and add a new container named **data** with an anonymous access level of **Private (no anonymous access)**.
+1. **Nella pagina Contenitori** selezionare **&#65291; Contenitore** e aggiungere un nuovo contenitore denominato con un livello di accesso anonimo privato (nessun accesso anonimo).Container and add a new container named with `data` an anonymous access level of **Private (no anonymous access)**.
 1. Una volta creato il contenitore **data**, verificare che sia elencato nella pagina **Contenitori**.
 1. Nel riquadro a sinistra, nella sezione in alto selezionare **Browser archiviazione**. Questa pagina fornisce un'interfaccia basata su browser che consente di lavorare con i dati nell'account di archiviazione.
 1. Nella pagina del browser archiviazione selezionare **Contenitori BLOB** e verificare che il contenitore **data** sia elencato.
 1. Selezionare il contenitore **data** e notare che è vuoto.
-1. Selezionare **&#65291; Aggiungi directory** e leggere le informazioni sulle cartelle prima di creare una nuova directory denominata **products**.
+1. Seleziona **&#65291; Aggiungere Directory** e leggere le informazioni sulle cartelle prima di creare una nuova directory denominata `products`.
 1. Nel browser archiviazione verificare che la visualizzazione corrente mostri il contenuto della cartella **products** appena creata. Si noti che il percorso di navigazione nella parte superiore della pagina corrisponde al percorso **Contenitori BLOB > data > products**.
 1. Nel percorso di navigazione selezionare **data** per passare al contenitore **data** e si noti che <u>non</u> contiene una cartella denominata **products**.
 
     Le cartelle nell'archivio BLOB sono virtuali ed esistono solo come parte del percorso di un BLOB. Poiché la cartella **products** non contiene BLOB, non esiste realmente.
 
 1. Usare il pulsante **&#10514; Carica** per aprire il pannello **Carica BLOB**.
-1. Nel pannello **Carica BLOB** selezionare il file **product1.json** salvato in precedenza nel computer locale. Quindi nella sezione **Avanzate**, nella casella **Carica nella cartella** immettere **product_data** e selezionare il pulsante **Carica**.
+1. Nel pannello **Carica BLOB** selezionare il file **product1.json** salvato in precedenza nel computer locale. Quindi, nella **sezione Avanzate** , nella casella Carica nella **cartella** immettere `product_data` e selezionare il **pulsante Carica** .
 1. Chiudere il pannello **Caricare BLOB** se è ancora aperto e verificare che una cartella virtuale **product_data** sia stata creata nel contenitore **data**.
 1. Selezionare la cartella **product_data** e verificare che contenga il BLOB **product1.json** caricato.
 1. Sulla sinistra, nella sezione **Archiviazione dati** selezionare **Contenitori**.
@@ -84,7 +84,7 @@ Il supporto di Azure Data Lake Store Gen2 consente di usare cartelle gerarchiche
 File di Azure consente di creare condivisioni file basate sul cloud.
 
 1. Nella pagina del portale di Azure del contenitore di archiviazione, sulla sinistra, nella sezione **Archiviazione dati** selezionare **Condivisioni file**.
-1. Nella pagina Condivisioni file selezionare **&#65291; Condivisione file** e aggiungere una nuova condivisione file denominata **files** usando il livello **Ottimizzato per le transazioni**.
+1. Nella pagina Condivisioni file selezionare **&#65291; ** Condivisione file e aggiungere una nuova condivisione file denominata `files` usando il livello Ottimizzato per le **transazioni** .
 2. Selezionare **Avanti: Backup >** e disabilitare il backup. Selezionare quindi **Rivedi e crea**.
 1. In **Condivisioni file** aprire la nuova condivisione **files**.
 1. Nella parte superiore della pagina selezionare **Connetti**, quindi nel riquadro **Connetti** si noti che esistono schede per i sistemi operativi comuni (Windows, Linux e macOS) contenenti script che è possibile eseguire per connettersi alla cartella condivisa da un computer client.
@@ -95,7 +95,7 @@ File di Azure consente di creare condivisioni file basate sul cloud.
 Tabelle di Azure fornisce un archivio di coppie chiave/valore per le applicazioni che, pur dovendo archiviare i valori dei dati, non necessitano della funzionalità completa e della struttura di un database relazionale.
 
 1. Nella pagina del portale di Azure del contenitore di archiviazione, sulla sinistra, nella sezione **Archiviazione dati** selezionare **Tabelle**.
-1. Nella pagina **Tabelle** selezionare **&#65291; Tabella** e creare una nuova tabella denominata **products**.
+1. **Nella pagina Tabelle** selezionare **&#65291; Tabella** e creare una nuova tabella denominata `products`.
 1. Una volta creata la tabella **products**, nel riquadro sulla sinistra, nella sezione in alto selezionare **Browser archiviazione**.
 1. Nello strumento di esplorazione dell'archiviazione selezionare **Tabelle** e verificare che la tabella **products** sia elencata.
 1. Selezionare la tabella **products**.

@@ -17,9 +17,10 @@ Sarà necessaria una [sottoscrizione di Azure](https://azure.microsoft.com/free)
 
 Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosmos DB in una sottoscrizione di Azure. In questo esercizio si effettuerà il provisioning di un account Cosmos DB che usa Azure Cosmos DB for NoSQL.
 
-1. Nel portale di Azure selezionare **Crea una risorsa** in alto a sinistra e cercare *Azure Cosmos DB*.  Nei risultati selezionare **Azure Cosmos DB** e quindi **Crea**.
+1. Nella portale di Azure selezionare **+ Crea una risorsa** in alto a sinistra e cercare `Azure Cosmos DB`.  Nei risultati selezionare **Azure Cosmos DB** e quindi **Crea**.
 1. Nel riquadro **Azure Cosmos DB for NoSQL** selezionare **Crea**.
 1. Immettere i dettagli seguenti e quindi selezionare **Rivedi e crea**:
+    - **Tipo di carico di** lavoro: Apprendimento
     - **Sottoscrizione**: se si sta usando una sandbox, selezionare *Concierge Subscription* (Sottoscrizione Concierge). In caso contrario, selezionare la sottoscrizione di Azure personale.
     - **Gruppo di risorse**: se si sta usando una sandbox, selezionare il gruppo di risorse esistente (che avrà un nome simile a *learn-xxxx...*). In caso contrario, creare un nuovo gruppo di risorse con il nome desiderato.
     - **Nome account**: immettere un nome univoco
@@ -47,14 +48,14 @@ Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosm
 1. Modificare il file JSON relativo al nuovo elemento come indicato di seguito e quindi selezionare **Salva**.
 
     ```json
-    {
-        "name": "Road Helmet,45",
-        "id": "123456789",
-        "categoryID": "123456789",
-        "SKU": "AB-1234-56",
-        "description": "The product called \"Road Helmet,45\" ",
-        "price": 48.74
-    }
+   {
+       "name": "Road Helmet,45",
+       "id": "123456789",
+       "categoryID": "123456789",
+       "SKU": "AB-1234-56",
+       "description": "The product called \"Road Helmet,45\" ",
+       "price": 48.74
+   }
     ```
 
 1. Dopo aver salvato il nuovo elemento, osservare come siano state automaticamente aggiunte altre proprietà dei metadati.
@@ -67,9 +68,9 @@ Per usare Cosmos DB, è necessario effettuare il provisioning di un account Cosm
 1. Modificare la query come segue:
 
     ```sql
-    SELECT *
-    FROM c
-    WHERE CONTAINS(c.name,"Helmet")
+   SELECT *
+   FROM c
+   WHERE CONTAINS(c.name,"Helmet")
     ```
 
 1. Usare il pulsante **Esegui query** per eseguire la query aggiornata ed esaminare i risultati, che includono le entità JSON per tutti gli elementi con un campo **name** contenente il testo "Helmet".
