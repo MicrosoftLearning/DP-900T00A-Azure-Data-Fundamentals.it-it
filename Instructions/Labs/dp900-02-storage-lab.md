@@ -41,7 +41,7 @@ Il primo passaggio per usare Archiviazione di Azure prevede il provisioning di u
 
     > _**Suggerimento**: un nuovo gruppo di risorse semplifica la pulizia. Standard + Archiviazione con ridondanza locale è la baseline di costo più basso, utile per l'apprendimento. L'archiviazione con ridondanza locale mantiene tre copie sincrone in un'area, adeguate per i dati demo non critici senza pagare per la replica geografica._
 
-1. Selezionare **Avanti: Avanzate >** e visualizzare le opzioni di configurazione avanzate. In particolare, si noti che qui è possibile abilitare lo spazio dei nomi gerarchico per supportare Azure Data Lake Storage Gen2. Lasciare **<u>deselezionata</u>** questa opzione (la si abiliterà in seguito) e quindi selezionare **Avanti: Rete >** per visualizzare le opzioni di rete per l'account di archiviazione.
+1. Selezionare **Avanti: Avanzate >** e visualizzare le opzioni di configurazione avanzate. In particolare, si noti che qui è possibile abilitare lo spazio dei nomi gerarchico per supportare Azure Data Lake Storage Gen2. Lasciare deselezionata questa opzione **<u>(verrà abilitata in un secondo momento) e quindi selezionare **Avanti: Rete >** per visualizzare le opzioni di rete per l'account di archiviazione.</u>**
    
    ![Screenshot del portale di Azure che mostra la seconda pagina per la creazione di un account di archiviazione](images/storage-page2.png)
 
@@ -61,63 +61,63 @@ Dopo aver creato un account di archiviazione di Azure, è possibile creare un co
 
 1. Scaricare il file JSON [product1.json](https://aka.ms/product1.json?azure-portal=true) da `https://aka.ms/product1.json` e salvarlo nel computer. È possibile salvarlo in qualsiasi cartella per caricarlo nell'archivio BLOB in seguito.
 
-    *Se il file JSON viene visualizzato nel browser, salvare la pagina come **product1.json**.*
+    *Se il file JSON viene visualizzato nel browser, fare clic con il pulsante destro del mouse sulla pagina e scegliere **Salva con nome**. Denominare il file  **product1.json** e archiviarlo nella cartella dei download.* 
 
-1. Nella pagina del portale di Azure del contenitore di archiviazione, sulla sinistra, nella sezione **Archiviazione dati** selezionare **Contenitori**.
+2. Nella pagina del portale di Azure del contenitore di archiviazione, sulla sinistra, nella sezione **Archiviazione dati** selezionare **Contenitori**.
    
     ![Screenshot del portale di Azure che mostra le opzioni di menu per un account di archiviazione](images/storage-menu-containers.png)
 
-1. **Nella pagina Contenitori** selezionare **&#65291; Aggiungere un contenitore e aggiungere un nuovo contenitore** denominato `data` con un livello di **accesso anonimo privato (nessun accesso anonimo).**
+3. **Nella pagina Contenitori** selezionare **&#65291; Aggiungere un contenitore e aggiungere un nuovo contenitore** denominato `data` con un livello di **accesso anonimo privato (nessun accesso anonimo).**
 
     ![Screenshot del portale di Azure che mostra un nuovo contenitore per un account di archiviazione](images/storage-new-container.png)
 
     > _**Suggerimento**: private mantiene protetti i dati di esempio. L'accesso pubblico è raramente necessario, ad eccezione di siti Web statici o scenari di dati aperti. La denominazione `data` mantiene questo esempio semplice e leggibile._
 
-1. Una volta creato il contenitore **data**, verificare che sia elencato nella pagina **Contenitori**.
+4. Una volta creato il contenitore **data**, verificare che sia elencato nella pagina **Contenitori**.
 
-1. Nel riquadro a sinistra, nella sezione in alto selezionare **Browser archiviazione**. Questa pagina fornisce un'interfaccia basata su browser che consente di lavorare con i dati nell'account di archiviazione.
+5. Nel riquadro a sinistra, nella sezione in alto selezionare **Browser archiviazione**. Questa pagina fornisce un'interfaccia basata su browser che consente di lavorare con i dati nell'account di archiviazione.
 
-1. Nella pagina del browser archiviazione selezionare **Contenitori BLOB** e verificare che il contenitore **data** sia elencato.
+6. Nella pagina del browser archiviazione selezionare **Contenitori BLOB** e verificare che il contenitore **data** sia elencato.
 
-1. Selezionare il contenitore **data** e notare che è vuoto.
+7. Selezionare il contenitore **data** e notare che è vuoto.
 
     ![Screenshot del portale di Azure che mostra il browser di archiviazione](images/storage-browser-empty.png)
 
-1. Seleziona **&#65291; Aggiungere Directory** e leggere le informazioni sulle cartelle prima di creare una nuova directory denominata `products`.
+8. Seleziona **&#65291; Aggiungere Directory** e leggere le informazioni sulle cartelle prima di creare una nuova directory denominata `products`.
 
-1. Nel browser archiviazione verificare che la visualizzazione corrente mostri il contenuto della cartella **products** appena creata. Si noti che il percorso di navigazione nella parte superiore della pagina corrisponde al percorso **Contenitori BLOB > data > products**.
+9. Nel browser archiviazione verificare che la visualizzazione corrente mostri il contenuto della cartella **products** appena creata. Si noti che il percorso di navigazione nella parte superiore della pagina corrisponde al percorso **Contenitori BLOB > data > products**.
 
     ![Screenshot del portale di Azure che mostra il percorso di navigazione del browser di archiviazione](images/storage-breadcrumb.png)
 
-1. Nel percorso di navigazione selezionare **data** per passare al contenitore **data** e si noti che <u>non</u> contiene una cartella denominata **products**.
+10. Nel percorso di navigazione selezionare **data** per passare al contenitore **data** e si noti che <u>non</u> contiene una cartella denominata **products**.
 
     Le cartelle nell'archivio BLOB sono virtuali ed esistono solo come parte del percorso di un BLOB. Poiché la cartella **products** non contiene BLOB, non esiste realmente.
 
     > _**Suggerimento**: lo spazio dei nomi flat indica che le directory sono solo prefissi dei nomi (prodotti/file.json). Questa progettazione consente una scalabilità massiva perché il servizio indicizza i nomi dei BLOB invece di mantenere una struttura ad albero vera._
 
-1. Usare il pulsante **&#10514; Carica** per aprire il pannello **Carica BLOB**.
+11. Usare il pulsante **&#10514; Carica** per aprire il pannello **Carica BLOB**.
 
-1. Nel pannello **Carica BLOB** selezionare il file **product1.json** salvato in precedenza nel computer locale. Quindi, nella **sezione Avanzate** , nella casella Carica nella **cartella** immettere `product_data` e selezionare il **pulsante Carica** .
+12. Nel pannello **Carica BLOB** selezionare il file **product1.json** salvato in precedenza nel computer locale. Quindi, nella **sezione Avanzate** , nella casella Carica nella **cartella** immettere `product_data` e selezionare il **pulsante Carica** .
 
     ![Screenshot del portale di Azure che mostra l'opzione carica BLOB](images/storage-upload-blob.png)
 
     > _**Suggerimento**: specificare un nome di cartella durante il caricamento automatico crea automaticamente il percorso virtuale, illustrando che la presenza di un BLOB rende visualizzata la "cartella"._
 
-1. Chiudere il pannello **Caricare BLOB** se è ancora aperto e verificare che una cartella virtuale **product_data** sia stata creata nel contenitore **data**.
+13. Chiudere il pannello **Caricare BLOB** se è ancora aperto e verificare che una cartella virtuale **product_data** sia stata creata nel contenitore **data**.
 
-1. Selezionare la cartella **product_data** e verificare che contenga il BLOB **product1.json** caricato.
+14. Selezionare la cartella **product_data** e verificare che contenga il BLOB **product1.json** caricato.
 
-1. Sulla sinistra, nella sezione **Archiviazione dati** selezionare **Contenitori**.
+15. Sulla sinistra, nella sezione **Archiviazione dati** selezionare **Contenitori**.
 
-1. Aprire il contenitore **data** e verificare che sia elencata la cartella **product_data** creata.
+16. Aprire il contenitore **data** e verificare che sia elencata la cartella **product_data** creata.
 
-1. Selezionare l'icona **&#x2027;&#x2027;&#x2027;** a destra della cartella e notare che non viene visualizzata alcuna opzione. Le cartelle in un contenitore BLOB dello spazio dei nomi flat sono virtuali e non possono essere gestite.
+17. Selezionare il **&#x2027; &#x2027; &#x2027;** icona all'estremità destra della cartella e si noti che il menu non visualizza alcuna opzione. Le cartelle in un contenitore BLOB dello spazio dei nomi flat sono virtuali e non possono essere gestite.
 
     ![Screenshot del portale di Azure che mostra le opzioni per la cartella virtuale](images/storage-virtual-folder.png)
 
     > _**Suggerimento**: non esiste alcun oggetto directory reale, quindi non sono presenti operazioni di ridenominazione/autorizzazione, che richiedono uno spazio dei nomi gerarchico._
 
-1. Usare l'icona **X** in alto a destra nella pagina **data** per chiudere la pagina e tornare alla pagina **Contenitori**.
+18. Usare l'icona **X** in alto a destra nella pagina **data** per chiudere la pagina e tornare alla pagina **Contenitori**.
 
 ## Esplorare Azure Data Lake Storage Gen2
 
